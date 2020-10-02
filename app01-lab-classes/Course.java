@@ -6,9 +6,11 @@
  */
 public class Course
 {
-    //This is the course title 
-    private String title;
+    //Computing G100
+    private String title; 
     
+
+
     private String code;
 
     /**
