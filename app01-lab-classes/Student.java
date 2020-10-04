@@ -15,18 +15,18 @@ public class Student
     private String id;
     // the amount of credits for study taken so far
     private int credits;
-    
+    // the course name
     private String course;
-    
+  
     /**
      * Create a new student with a given name and ID number.
      */
-    public Student(String fullName, String studentID,String studentsCource)
+    public Student(String fullName, String studentID,String studentsCourse)
     {
         name = fullName;   
         id = studentID; 
         credits = 0;
-        course = studentsCource;
+        course = studentsCourse;
     }
     
     /**
