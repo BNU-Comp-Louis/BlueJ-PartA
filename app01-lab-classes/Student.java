@@ -16,19 +16,19 @@ public class Student
     // the amount of credits for study taken so far
     private int credits;
     
-    private Course course;
-    
+    private String course;
     
     /**
      * Create a new student with a given name and ID number.
      */
-    public Student(String fullName, String studentID)
+    public Student(String fullName, String studentID,String studentsCource)
     {
-        name = fullName;
-        id = studentID;
+        name = fullName;   
+        id = studentID; 
         credits = 0;
+        course = studentsCource;
     }
-
+    
     /**
      * Return the full name of this student.
      */
@@ -61,7 +61,6 @@ public class Student
         credits += additionalPoints;
     }
 
-    
     /**
      * Return the number of credit points this student has accumulated.
      */
@@ -80,16 +79,17 @@ public class Student
         return name.substring(0,4) + id.substring(0,3);
     }
     
-    public void enroloncourse (Course course)
+    public String getEnrolledCourse()
     {
-        this.course = course;
-        
+        return course;
     }
+    
     /**
      * Print the student's name and ID number to the output terminal.
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        System.out.println(name + ", student ID: " + id + ", credits: " 
+        + credits + ", Course "+ course);
     }
 }

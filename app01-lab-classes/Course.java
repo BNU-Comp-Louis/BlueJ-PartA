@@ -13,12 +13,15 @@ public class Course
 
     private String code;
 
+    
+    
     /**
      * Constructor for objects of class Course
      */
-    public Course()
+    public Course (String courseTitle,String courceCode)
     {
-        
+        title = courseTitle;
+        code = courceCode;
     }
 
 

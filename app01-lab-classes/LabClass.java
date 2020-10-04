@@ -60,7 +60,7 @@ public class LabClass
      */
     public void setRoom(String roomNumber)
     {
-        room = roomNumber;
+       room = roomNumber;
     }
     
     /**
