@@ -1,10 +1,7 @@
 #BlueJ package file
-dependency1.from=Student
-dependency1.to=Course
+dependency1.from=LabClass
+dependency1.to=Student
 dependency1.type=UsesDependency
-dependency2.from=LabClass
-dependency2.to=Student
-dependency2.type=UsesDependency
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
@@ -15,11 +12,11 @@ package.divider.horizontal=0.599476439790576
 package.divider.vertical=0.7876857749469215
 package.editor.height=364
 package.editor.width=670
-package.editor.x=538
-package.editor.y=231
+package.editor.x=973
+package.editor.y=35
 package.frame.height=571
 package.frame.width=800
-package.numDependencies=2
+package.numDependencies=1
 package.numTargets=3
 package.showExtends=true
 package.showUses=true
