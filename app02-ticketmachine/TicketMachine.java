@@ -25,6 +25,10 @@ public class TicketMachine
     
     private Ticket aylesburyTicket;
     
+    private Ticket amershamTicket;
+    
+    private Ticket highWycombeTicket;
+    
     private Ticket issuedTicket;
 
     /**
@@ -32,15 +36,35 @@ public class TicketMachine
      */
     public TicketMachine(int cost)
     {
-        price = 0;
-        balance = 0;
-        total = 0;
-        
-        aylesburyTicket = new Ticket ("Aylesbury" , 220);
-        
-        issuedTicket = null;
+        /*
+         * Aylesbury costing 220
+         * Amersham costing  300
+         * High Wycombe costing 330
+         */   
+             price = cost; // cost is a parameter, what is used to call Ticketmachiene i.e Ticketmachiene(400), will be the price
+             balance = 0; // we don't do anything with this yet
+             total = 0; // we don't do anythign with this yet
+             
+             // define new tickets with prices and names
+             aylesburyTicket = new Ticket("Aylesbury", 220);
+             amershamTicket = new Ticket("Amersham", 300);
+             highWycombeTicket = new Ticket("High Wycombe", 330);
+             
+             
+             // create conditional checks to decide which ticket shoud be issued
+                 if(price  == 220){
+                 issuedTicket = aylesburyTicket; // if price == 220, its for aylesbury
+                }
+                else if(price  == 300){
+                    issuedTicket = amershamTicket;// if price == 300, its for amersham
+                }
+                else if(price  == 330){
+                    issuedTicket = highWycombeTicket; // if price == 330, its for wycombe,
+                }
+                else{
+                    issuedTicket = null; // if its not any of the other values, the ticket is void.
+                }
     }
-
     /**
      * @Return The price of a ticket.
      */
@@ -80,6 +104,16 @@ public class TicketMachine
         issuedTicket = aylesburyTicket;
     }
 
+    public void selectHighWycombeTicket()
+    {
+        issuedTicket = highWycombeTicket;
+    }
+    
+    public void selectAmershamTicket()
+    {
+        issuedTicket = amershamTicket;
+    }
+    
     /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print

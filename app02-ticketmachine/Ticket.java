@@ -2,8 +2,8 @@ import java.util.Date;
 /**
  * Write a description of class Ticket here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Louis Symons)
+ * @version (10/10/)
  */
 public class Ticket
 {
@@ -29,6 +29,7 @@ public class Ticket
       this.price = price; 
       
       issueDateTime = new Date();
+      
     }
     
     /**
