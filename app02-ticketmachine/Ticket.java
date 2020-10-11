@@ -3,7 +3,7 @@ import java.util.Date;
  * Write a description of class Ticket here.
  *
  * @author (Louis Symons)
- * @version (10/10/)
+ * @version (10/10/2020)
  */
 public class Ticket
 {
@@ -33,9 +33,9 @@ public class Ticket
     }
     
     /**
-     * Print Method for Ticket information (insert more info)
+     * Print Method for Ticket information destination, price and issue date of ticket. 
      */
-    public void print()
+    public void printTicket()
     {
         System.out.println ( " Ticket " + destination + price + " Price " + " Issued " + issueDateTime);
     }    

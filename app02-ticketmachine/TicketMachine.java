@@ -1,4 +1,7 @@
+
+
 /**
+ * 
  * TicketMachine models a ticket machine that issues
  * flat-fare tickets.
  * The price of a ticket is specified via the constructor.
@@ -21,8 +24,6 @@ public class TicketMachine
     // The total amount of money collected by this machine.
     private int total;
     
-    private Ticket ticket;
-    
     private Ticket aylesburyTicket;
     
     private Ticket amershamTicket;
@@ -30,42 +31,74 @@ public class TicketMachine
     private Ticket highWycombeTicket;
     
     private Ticket issuedTicket;
+    
+    private Coin coin;
+    
+  
 
     /**
      * Create a machine that issues tickets of the given price.
      */
     public TicketMachine(int cost)
     {
-        /*
-         * Aylesbury costing 220
-         * Amersham costing  300
-         * High Wycombe costing 330
-         */   
-             price = cost; // cost is a parameter, what is used to call Ticketmachiene i.e Ticketmachiene(400), will be the price
-             balance = 0; // we don't do anything with this yet
-             total = 0; // we don't do anythign with this yet
-             
-             // define new tickets with prices and names
-             aylesburyTicket = new Ticket("Aylesbury", 220);
-             amershamTicket = new Ticket("Amersham", 300);
-             highWycombeTicket = new Ticket("High Wycombe", 330);
-             
-             
-             // create conditional checks to decide which ticket shoud be issued
-                 if(price  == 220){
-                 issuedTicket = aylesburyTicket; // if price == 220, its for aylesbury
-                }
-                else if(price  == 300){
-                    issuedTicket = amershamTicket;// if price == 300, its for amersham
-                }
-                else if(price  == 330){
-                    issuedTicket = highWycombeTicket; // if price == 330, its for wycombe,
-                }
-                else{
-                    issuedTicket = null; // if its not any of the other values, the ticket is void.
-                }
+         Ticket aylesburyTicket=new Ticket("Aylesbury", 220);
+         Ticket amershamTicket=new Ticket("Amersham" , 300);
+         Ticket highWycombeTicket=new Ticket("High Wycombe" , 330);
+        
+         
+
     }
-    /**
+
+    
+    public void purchaseTicket(String destination)
+    
+    //select ticket at set price.
+  {
+    if (destination.equals("Aylesbury")) 
+    
+    
+        if (balance<220){
+            System.out.println("Please"+ "insert" + (220 - balance)
+            + "more cents");
+                        }
+        else{
+            System.out.println("Payment Sucessful Thankyou");
+            aylesburyTicket.printTicket();
+            balance = balance - 220;
+            }
+            
+    if (destination.equals("Amersham")) 
+    
+    
+     if (balance<220){
+            System.out.println("Please"+ "insert" + (220 - balance)
+            + "more cents");
+                        }
+    else{
+    System.out.println("Payment Sucessful Thankyou");
+    aylesburyTicket.printTicket();
+    balance = balance - 220;
+            }
+
+    if (destination.equals("High Wycombe")) 
+    
+    
+        if (balance<220){
+            System.out.println("Please"+ "insert" + (220 - balance)
+            + "more cents");
+                        }
+        else{
+            System.out.println("Payment Sucessful Thankyou");
+            aylesburyTicket.printTicket();
+            balance = balance - 220;
+            }
+            
+    
+    
+  }   
+        
+     /**
+     * 
      * @Return The price of a ticket.
      */
     public int getPrice()
@@ -99,20 +132,7 @@ public class TicketMachine
         }
     }
     
-    public void selectAylesburyTicket()
-    {
-        issuedTicket = aylesburyTicket;
-    }
 
-    public void selectHighWycombeTicket()
-    {
-        issuedTicket = highWycombeTicket;
-    }
-    
-    public void selectAmershamTicket()
-    {
-        issuedTicket = amershamTicket;
-    }
     
     /**
      * Print a ticket if enough money has been inserted, and
