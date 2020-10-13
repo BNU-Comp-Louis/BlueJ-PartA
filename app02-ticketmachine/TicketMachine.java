@@ -23,6 +23,8 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    //coin refernce 
+    private Coin coin;
     
     private Ticket aylesburyTicket;
     
@@ -32,7 +34,7 @@ public class TicketMachine
     
     private Ticket issuedTicket;
     
-    private Coin coin;
+    
     
   
 
@@ -41,16 +43,17 @@ public class TicketMachine
      */
     public TicketMachine(int cost)
     {
+         price = cost;
          Ticket aylesburyTicket=new Ticket("Aylesbury", 220);
          Ticket amershamTicket=new Ticket("Amersham" , 300);
          Ticket highWycombeTicket=new Ticket("High Wycombe" , 330);
+         
         
          
 
     }
-
-    
-    public void purchaseTicket(String destination)
+        
+        public void purchaseTicket(String destination)
     
     //select ticket at set price.
   {
@@ -132,39 +135,16 @@ public class TicketMachine
         }
     }
     
-
-    
-    /**
-     * Print a ticket if enough money has been inserted, and
-     * reduce the current balance by the ticket price. Print
-     * an error message if more money is required.
-     */
-    public void printTicket()
+    public void insertMoney(Coin coin)
     {
-        if(balance >= price) 
-        {
-            // Simulate the printing of a ticket.
-            System.out.println("##################");
-            System.out.println("# The BlueJ Line");
-            System.out.println("# Ticket");
-            System.out.println("# " + price + " cents.");
-            System.out.println("##################");
-            System.out.println();
-
-            // Update the total collected with the price.
-            total = total + price;
-            // Reduce the balance by the price.
-            balance = balance - price;
-        }
-        else 
-        {
-            System.out.println("You must insert at least: " +
-                               (price - balance) + " more cents.");
-                    
-        }
+    if(coin.getAmount() ==10)
+    {
+        balance = balance + coin.getAmount();
+        System.out.println("You inserted 10p");
     }
+}
 
-    /**
+/**
      * Return the money in the balance.
      * The balance is cleared.
      */
