@@ -119,6 +119,7 @@ public class TicketMachine
         }
     }
     
+    public enum 
 
 
     /**
@@ -144,14 +145,36 @@ public class TicketMachine
         
     }
     
+    /**
+     * Method to print all available desitnations and the heading of Ticket
+     */
     public void printAllAvavilableTickets()
     {
+        printHeading();
         amershamTicket.print();
         aylesburyTicket.print(); 
         highWycombeTicket.print();
+        printMessage();
     }   
- 
+    
+    /**
+     * Heading of Ticket 
+     */
+    public void printHeading()
+    {
+        System.out.println("####Destinination Request####");
+        System.out.println("We have Three avavilble destintaions");
+        System.out.println("See Availble Tickets Below:");
+    }
         
-        
+    /**
+     * Ending Print Line 
+     */    
+    public void printMessage()
+    {
+        System.out.println("Thankyou for choosing TicketMachine");
+    }
+   
+    
 }
 
