@@ -54,3 +54,30 @@ ticketMa1.selectTicket("High Wycombe");
 Your Transation has been approved
 Destination: High WycombePrice:330pence
 Issued:Thu Oct 15 15:14:40 BST 2020
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.insert200p();
+Total Amount Entered200
+ticketMa1.insert200p();
+Total Amount Entered400
+ticketMa1.selectTicket("High Wycombe");
+Your Transation has been approved
+Destination: High WycombePrice:330pence
+Issued:Thu Oct 15 15:26:21 BST 2020
+You can get a refund of:70Pence
+ticketMa1.refundBalance()
+    returned int 70
+ticketMa1.insert200p();
+Total Amount Entered200
+ticketMa1.insert100p();
+Total Amount Entered300
+ticketMa1.selectTicket("High Wycombe");
+Please Insert30more pence to purchase ticket
+ticketMa1.insert10p();
+Total Amount Entered310
+ticketMa1.insert20p();
+Total Amount Entered330
+ticketMa1.selectTicket("High Wycombe");
+Your Transation has been approved
+Destination: High WycombePrice:330pence
+Issued:Thu Oct 15 15:26:21 BST 2020
+You can get a refund of:0Pence

@@ -108,6 +108,8 @@ public class TicketMachine
                 System.out.println("Your Transation has been approved");
                 aylesburyTicket.print();
                 balance = balance - 220;
+                System.out.println("You can get a refund of:" + balance +
+                "Pence");
             }
         }
         if (destination.equals ("High Wycombe"))
@@ -122,6 +124,8 @@ public class TicketMachine
                 System.out.println("Your Transation has been approved");
                 highWycombeTicket.print();
                 balance = balance - 330;
+                System.out.println("You can get a refund of:" + balance +
+                "Pence");
             }
         }
     }
