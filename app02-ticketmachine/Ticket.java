@@ -10,7 +10,7 @@ public class Ticket
 {
     private String destination;
     //Destination of a Ticket
-    private double price;
+    private int price;
     // This is in pence
     private Date datePurchased; 
     // Print a date of Purchase
@@ -18,7 +18,7 @@ public class Ticket
     /**
      * 
      */
-    public Ticket(String destination, double price)
+    public Ticket(String destination, int price)
     {
         this.price = price;
         this.destination = destination;
@@ -28,7 +28,7 @@ public class Ticket
     /**
      * Set Price for Ticket
      */
-    public void setPrice(double price)
+    public void setPrice(int price)
     {
         this.price = price;
     }
@@ -36,7 +36,7 @@ public class Ticket
     /**
      * Return the value of the Ticket
      */
-    public double getPrice()
+    public int getPrice()
     {
         return price;
     }
@@ -59,7 +59,7 @@ public class Ticket
     public void print()
     {
         System.out.print("Destination: " + destination);
-        System.out.println("Price:£ " + price);  
+        System.out.println("Price:" + price + "pence");  
         System.out.println("Issued:" + datePurchased);
     }
     

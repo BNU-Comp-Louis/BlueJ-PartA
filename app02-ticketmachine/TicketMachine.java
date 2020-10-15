@@ -50,31 +50,51 @@ public class TicketMachine
     private void createTickets()
     {
         amershamTicket = new Ticket("Amersham" , 300);
-        aylesburyTicket = new Ticket("Aylesbury" , 200);
+        aylesburyTicket = new Ticket("Aylesbury" , 220);
         highWycombeTicket = new Ticket("High Wycombe" , 330);
      
     }
     
     public void insert10p()
-    {
+    {//Insert money method 
         balance = balance + 10;
     }
     
     public void insert20p()
-    {
+    {//Insert money method 
         balance = balance + 20;
     }
     
     public void insert100p()
-    {
+    {//Insert money method 
         balance = balance + 100;
     }
     
     public void insert200p()
-    {
+    {//Insert money method 
         balance = balance + 200;
     }
     
+    public void selectTicket(String destination)
+    {
+        if (destination.equals ("Amersham"))
+        {
+            if (balance<300)
+            {
+                System.out.println("Please Insert" +(300- balance) + 
+                "more pence");
+            }
+            else
+            {
+                System.out.println("Your Transation has been approved");
+                amershamTicket.print();
+                balance = balance - 300;
+                
+            } 
+        }
+                
+        
+    }   
      /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
