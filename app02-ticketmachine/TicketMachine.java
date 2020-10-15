@@ -53,25 +53,25 @@ public class TicketMachine
     }
     
     public void insert10p()
-    {//Insert money method 
+    {//Insert money method with rolling total
         balance = balance + 10;
         System.out.println("Total Amount Entered" + balance);
     }
     
     public void insert20p()
-    {//Insert money method 
+    {//Insert money method with rolling total
         balance = balance + 20;
         System.out.println("Total Amount Entered" + balance);
     }
     
     public void insert100p()
-    {//Insert money method 
+    {//Insert money method with rolling total
         balance = balance + 100;
         System.out.println("Total Amount Entered" + balance );
     }
     
     public void insert200p()
-    {//Insert money method 
+    {//Insert money method with rolling total
         balance = balance + 200;
         System.out.println("Total Amount Entered" + balance);
     }
