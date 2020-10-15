@@ -26,13 +26,12 @@ public class TicketMachine
     //coin refernce 
     private Coin coin;
     //Ticket type
-    public Ticket aylesburyTicket;
-    //Ticket type
+    private Ticket aylesburyTicket;
+    //Ticket type "destination"
     private Ticket amershamTicket;
-    //Ticket type
+    //Ticket type "destination"
     private Ticket highWycombeTicket;
-    //Ticket type
-    private Ticket issuedTicket;
+  
     
     /**
      * Create a machine that issues tickets of the given price.
@@ -41,11 +40,14 @@ public class TicketMachine
     {
          balance = 0;
          total = 0;
-         createTicket();
+         createTickets();
   
     }
     
-    public  void createTicket()
+    /**
+     * Tickets created 
+     */
+    private void createTickets()
     {
         amershamTicket = new Ticket("Amersham" , 300);
         aylesburyTicket = new Ticket("Aylesbury" , 200);
@@ -141,5 +143,15 @@ public class TicketMachine
          int total = 0;
         
     }
+    
+    public void printAllAvavilableTickets()
+    {
+        amershamTicket.print();
+        aylesburyTicket.print(); 
+        highWycombeTicket.print();
+    }   
+ 
+        
+        
 }
 
