@@ -25,7 +25,7 @@ public class TicketMachine
     private int total;
     //coin refernce
     private Coin coin;
-    //Ticket type
+    //Ticket type "destination"
     private Ticket aylesburyTicket;
     //Ticket type "destination"
     private Ticket amershamTicket;
