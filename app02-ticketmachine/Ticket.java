@@ -16,7 +16,7 @@ public class Ticket
     // Print a date of Purchase
   
     /**
-     * 
+     * Destination and price of a ticket with date. 
      */
     public Ticket(String destination, int price)
     {
@@ -42,12 +42,13 @@ public class Ticket
     }
     
     public Date datePurchased()
+    //Will show the date of purchase
     {
         return datePurchased;
     }
     
     /**
-     * Return the destination
+     * Return the destination 
      */
     public String getDestination()
     {
