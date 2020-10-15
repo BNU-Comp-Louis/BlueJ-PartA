@@ -23,7 +23,7 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
-    //coin refernce 
+    //coin refernce
     private Coin coin;
     //Ticket type
     private Ticket aylesburyTicket;
@@ -32,7 +32,6 @@ public class TicketMachine
     //Ticket type "destination"
     private Ticket highWycombeTicket;
   
-    
     /**
      * Create a machine that issues tickets of the given price.
      */
@@ -41,7 +40,6 @@ public class TicketMachine
          balance = 0;
          total = 0;
          createTickets();
-  
     }
     
     /**
@@ -52,29 +50,30 @@ public class TicketMachine
         amershamTicket = new Ticket("Amersham" , 300);
         aylesburyTicket = new Ticket("Aylesbury" , 220);
         highWycombeTicket = new Ticket("High Wycombe" , 330);
-     
     }
     
     public void insert10p()
     {//Insert money method 
         balance = balance + 10;
+        System.out.println("Total Amount Entered" + balance);
     }
     
     public void insert20p()
     {//Insert money method 
         balance = balance + 20;
+        System.out.println("Total Amount Entered" + balance);
     }
     
     public void insert100p()
     {//Insert money method 
         balance = balance + 100;
+        System.out.println("Total Amount Entered" + balance );
     }
     
     public void insert200p()
     {//Insert money method 
         balance = balance + 200;
-        
-        
+        System.out.println("Total Amount Entered" + balance);
     }
     
     public void selectTicket(String destination)
@@ -212,7 +211,6 @@ public class TicketMachine
     {
         System.out.println("Thankyou for choosing TicketMachine");
     }
-   
-    
+ 
 }
 
