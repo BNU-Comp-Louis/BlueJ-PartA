@@ -73,6 +73,7 @@ public class TicketMachine
     public void insert200p()
     {//Insert money method 
         balance = balance + 200;
+        
     }
     
     public void selectTicket(String destination)
@@ -121,33 +122,7 @@ public class TicketMachine
             }
         }
     }
-                
-     /**
-     * Print a ticket if enough money has been inserted, and
-     * reduce the current balance by the ticket price. Print
-     * an error message if more money is required.
-     */
-    public void printTicket()
-    {
-        
-     if(balance >= price) 
-     {
-            // Simulate the printing of a ticket.
-
-
-            // Update the total collected with the price.
-            total = total + price;
-            // Reduce the balance by the price.
-            balance = balance - price;
-        }
-        else 
-        {
-            System.out.println("You must insert at least: " +
-                               (price - balance) + " more cents.");
-     }
-                    
-    }
-       
+                               
      /**
      * 
      * @Return The price of a ticket.
