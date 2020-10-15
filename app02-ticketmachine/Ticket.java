@@ -59,7 +59,7 @@ public class Ticket
     public void print()
     {
         System.out.print("Destination: " + destination);
-        System.out.println(" Price:£ " + price);  
+        System.out.println("Price:£ " + price);  
         System.out.println("Issued:" + datePurchased);
     }
     
