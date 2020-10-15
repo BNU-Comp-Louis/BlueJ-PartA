@@ -92,9 +92,36 @@ public class TicketMachine
                 
             } 
         }
+        if (destination.equals ("Aylesbury"))
+        {
+            if (balance<220)
+            {
+                System.out.println("Please Insert" + (220 - balance) +
+                "more pence");
+            }
+            else
+            {
+                System.out.println("Your Transation has been approved");
+                aylesburyTicket.print();
+                balance = balance - 220;
+            }
+        }
+        if (destination.equals ("High Wycombe"))
+        {
+            if (balance<330)
+            {
+                System.out.println("Please Insert" + (330 - balance) +
+                "more pence");
+            }
+            else
+            {
+                System.out.println("Your Transation has been approved");
+                highWycombeTicket.print();
+                balance = balance - 330;
+            }
+        }
+    }
                 
-        
-    }   
      /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
