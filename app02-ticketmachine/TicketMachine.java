@@ -43,7 +43,7 @@ public class TicketMachine
     }
     
     /**
-     * Tickets created 
+     * Tickets created for destinations including prices 
      */
     private void createTickets()
     {
@@ -84,7 +84,7 @@ public class TicketMachine
             if (balance<300)
             {
                 System.out.println("Please Insert" +(300- balance) + 
-                "more pence");
+                "more pence to purchase ticket");
             }
             else
             {
@@ -99,7 +99,7 @@ public class TicketMachine
             if (balance<220)
             {
                 System.out.println("Please Insert" + (220 - balance) +
-                "more pence");
+                "more pence to purchase ticket");
             }
             else
             {
@@ -112,8 +112,8 @@ public class TicketMachine
         {
             if (balance<330)
             {
-                System.out.println("Please Insert" + (330 - balance) +
-                "more pence");
+                System.out.println("Please Insert"  +  (330 - balance)  +
+                "more pence to purchase ticket");
             }
             else
             {
