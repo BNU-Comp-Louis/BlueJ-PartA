@@ -91,6 +91,8 @@ public class TicketMachine
                 System.out.println("Your Transation has been approved");
                 amershamTicket.print();
                 balance = balance - 300;
+                System.out.println("You can get a refund of:" + balance +
+                "Pence");
                 
             } 
         }

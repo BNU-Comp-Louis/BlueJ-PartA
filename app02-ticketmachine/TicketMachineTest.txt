@@ -1,0 +1,56 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.printAllAvavilableTickets();
+####Destinination Request####
+We have Three avavilble destintaions
+See Availble Tickets Below:
+Destination: AmershamPrice:300pence
+Issued:Thu Oct 15 15:14:40 BST 2020
+Destination: AylesburyPrice:220pence
+Issued:Thu Oct 15 15:14:40 BST 2020
+Destination: High WycombePrice:330pence
+Issued:Thu Oct 15 15:14:40 BST 2020
+Thankyou for choosing TicketMachine
+ticketMa1.selectTicket("Amersham");
+Please Insert300more pence to purchase ticket
+ticketMa1.insert200p();
+Total Amount Entered200
+ticketMa1.insert100p();
+Total Amount Entered300
+ticketMa1.selectTicket("Amersham");
+Your Transation has been approved
+Destination: AmershamPrice:300pence
+Issued:Thu Oct 15 15:14:40 BST 2020
+ticketMa1.selectTicket("Aylesbury");
+Please Insert220more pence to purchase ticket
+ticketMa1.insert200p();
+Total Amount Entered200
+ticketMa1.insert20p();
+Total Amount Entered220
+ticketMa1.selectTicket("Aylesbury");
+Your Transation has been approved
+Destination: AylesburyPrice:220pence
+Issued:Thu Oct 15 15:14:40 BST 2020
+ticketMa1.selectTicket("High Wycombe");
+Please Insert330more pence to purchase ticket
+ticketMa1.insert10p();
+Total Amount Entered10
+ticketMa1.insert10p();
+Total Amount Entered20
+ticketMa1.insert20p();
+Total Amount Entered40
+ticketMa1.insert20p();
+Total Amount Entered60
+ticketMa1.insert20p();
+Total Amount Entered80
+ticketMa1.insert20p();
+Total Amount Entered100
+ticketMa1.insert200p();
+Total Amount Entered300
+ticketMa1.insert10p();
+Total Amount Entered310
+ticketMa1.insert20p();
+Total Amount Entered330
+ticketMa1.selectTicket("High Wycombe");
+Your Transation has been approved
+Destination: High WycombePrice:330pence
+Issued:Thu Oct 15 15:14:40 BST 2020
