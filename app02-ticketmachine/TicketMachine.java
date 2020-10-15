@@ -74,9 +74,11 @@ public class TicketMachine
     {//Insert money method 
         balance = balance + 200;
         
+        
     }
     
     public void selectTicket(String destination)
+    //Selection of Tickets at Set prices and print method to display balance
     {
         if (destination.equals ("Amersham"))
         {
@@ -123,7 +125,7 @@ public class TicketMachine
         }
     }
                                
-     /**
+    /**
      * 
      * @Return The price of a ticket.
      */
@@ -158,9 +160,6 @@ public class TicketMachine
         }
     }
     
-    
-
-
     /**
      * Return the money in the balance.
      * The balance is cleared.
