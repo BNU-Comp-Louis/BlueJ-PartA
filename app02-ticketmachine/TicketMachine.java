@@ -26,7 +26,7 @@ public class TicketMachine
     //coin refernce 
     private Coin coin;
     //Ticket type
-    private Ticket aylesburyTicket;
+    public Ticket aylesburyTicket;
     //Ticket type
     private Ticket amershamTicket;
     //Ticket type
@@ -37,83 +37,56 @@ public class TicketMachine
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int price)
+    public TicketMachine()
     {
-         price = price;
-         Ticket aylesburyTicket=new Ticket("Aylesbury", 220);
-         Ticket amershamTicket=new Ticket("Amersham" , 300);
-         Ticket highWycombeTicket=new Ticket("High Wycombe" , 330);
-         
+         balance = 0;
+         total = 0;
+         createTicket();
+  
+    }
+    
+    public  void createTicket()
+    {
+        amershamTicket = new Ticket("Amersham" , 300);
+        aylesburyTicket = new Ticket("Aylesbury" , 200);
+        highWycombeTicket = new Ticket("High Wycombe" , 330);
+     
+    }
+    
+      /**
+     * Print a ticket if enough money has been inserted, and
+     * reduce the current balance by the ticket price. Print
+     * an error message if more money is required.
+     */
+    public void printTicket()
+    {
         
-         
+     if(balance >= price) 
+     {
+            // Simulate the printing of a ticket.
 
-    }
-    
-   
-    public void purchaseTicket(String destination)
-    
-    //select ticket at set price.
-    {
-    if (destination.equals("Aylesbury")) 
-    
-    
-        if (balance<220){
-      System.out.println("Please"+ "insert" + (220 - balance)
-            + "more cents");
-                        }
-        else{
-     System.out.println("Payment Sucessful Thankyou");
-            aylesburyTicket.printTicket();
-            balance = balance - 220;
-            }
-            
-    if (destination.equals("Amersham")) 
-    
-    
-     if (balance<220){
-     System.out.println("Please"+ "insert" + (220 - balance)
-            + "more cents");
-                        }
-    else{
-    System.out.println("Payment Sucessful Thankyou");
-    amershamTicket.printTicket();
-    balance = balance - 220;
-            }
 
-    if (destination.equals("High Wycombe")) 
-    
-    
-        if (balance<220){
-            System.out.println("Please"+ "insert" + (220 - balance)
-            + "more cents");
-                        }
-        else{
-            System.out.println("Payment Sucessful Thankyou");
-            highWycombeTicket.printTicket();
-            balance = balance - 220;
-            }
-    }        
-    public static void insertCoin(String Coin)
-    
-    {
-       String s1="1p";
-       String s2="10p";
-       String s3="50p";
-       String s4="£1";
-       String s5="£2";
-       System.out.println("You Have Entered" +  s1);
-       System.out.println("You Have Entered" +  s2);
-       System.out.println("You Have Entered" +  s3);
-       System.out.println("You Have Entered" +  s4);
-       System.out.println("You Have Entered" +  s5);
-   
+            // Update the total collected with the price.
+            total = total + price;
+            // Reduce the balance by the price.
+            balance = balance - price;
+        }
+        else 
+        {
+            System.out.println("You must insert at least: " +
+                               (price - balance) + " more cents.");
+     }
+                    
     }
+        
+        
+
     
      /**
      * 
      * @Return The price of a ticket.
      */
-    public int getPrice()
+     public int getPrice()
     {
         return price;
     }
