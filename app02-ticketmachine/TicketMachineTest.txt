@@ -3,81 +3,188 @@ ticketMa1.printAllAvavilableTickets();
 ####Destinination Request####
 We have Three avavilble destintaions
 See Availble Tickets Below:
-Destination: AmershamPrice:300pence
-Issued:Thu Oct 15 15:14:40 BST 2020
-Destination: AylesburyPrice:220pence
-Issued:Thu Oct 15 15:14:40 BST 2020
-Destination: High WycombePrice:330pence
-Issued:Thu Oct 15 15:14:40 BST 2020
+
+Destination:  AmershamPrice:300 pence
+Issued:Fri Oct 16 11:29:08 BST 2020
+
+Destination:  AylesburyPrice:220 pence
+Issued:Fri Oct 16 11:29:08 BST 2020
+
+Destination:  High WycombePrice:330 pence
+Issued:Fri Oct 16 11:29:08 BST 2020
+
 Thankyou for choosing TicketMachine
+
+
 ticketMa1.selectTicket("Amersham");
-Please Insert300more pence to purchase ticket
+Please Insert 300 more pence to purchase ticket
+
 ticketMa1.insert200p();
-Total Amount Entered200
+Total Amount Entered 200
+
 ticketMa1.insert100p();
-Total Amount Entered300
+Total Amount Entered 300
+
 ticketMa1.selectTicket("Amersham");
 Your Transation has been approved
-Destination: AmershamPrice:300pence
-Issued:Thu Oct 15 15:14:40 BST 2020
+Destination:  AmershamPrice:300 pence
+Issued:Fri Oct 16 11:29:08 BST 2020
+
+You can get a refund of: 0 Pence
+
 ticketMa1.selectTicket("Aylesbury");
-Please Insert220more pence to purchase ticket
+Please Insert 220 more pence to purchase ticket
+
 ticketMa1.insert200p();
-Total Amount Entered200
+Total Amount Entered 200
+
 ticketMa1.insert20p();
-Total Amount Entered220
+Total Amount Entered 220
+
 ticketMa1.selectTicket("Aylesbury");
 Your Transation has been approved
-Destination: AylesburyPrice:220pence
-Issued:Thu Oct 15 15:14:40 BST 2020
+Destination:  AylesburyPrice:220 pence
+Issued:Fri Oct 16 11:29:08 BST 2020
+
+You can get a refund of: 0 Pence
+
 ticketMa1.selectTicket("High Wycombe");
-Please Insert330more pence to purchase ticket
-ticketMa1.insert10p();
-Total Amount Entered10
-ticketMa1.insert10p();
-Total Amount Entered20
-ticketMa1.insert20p();
-Total Amount Entered40
-ticketMa1.insert20p();
-Total Amount Entered60
-ticketMa1.insert20p();
-Total Amount Entered80
-ticketMa1.insert20p();
-Total Amount Entered100
+Please Insert 330 more pence to purchase ticket
+
 ticketMa1.insert200p();
-Total Amount Entered300
+Total Amount Entered 200
+
+ticketMa1.insert100p();
+Total Amount Entered 300
+
 ticketMa1.insert10p();
-Total Amount Entered310
+Total Amount Entered 310
+
 ticketMa1.insert20p();
-Total Amount Entered330
+Total Amount Entered 330
+
 ticketMa1.selectTicket("High Wycombe");
 Your Transation has been approved
-Destination: High WycombePrice:330pence
-Issued:Thu Oct 15 15:14:40 BST 2020
-TicketMachine ticketMa1 = new TicketMachine();
+Destination:  High WycombePrice:330 pence
+Issued:Fri Oct 16 11:29:08 BST 2020
+
+You can get a refund of: 0 Pence
+
 ticketMa1.insert200p();
-Total Amount Entered200
+Total Amount Entered 200
+
 ticketMa1.insert200p();
-Total Amount Entered400
+Total Amount Entered 400
+
 ticketMa1.selectTicket("High Wycombe");
 Your Transation has been approved
-Destination: High WycombePrice:330pence
-Issued:Thu Oct 15 15:26:21 BST 2020
-You can get a refund of:70Pence
+Destination:  High WycombePrice:330 pence
+Issued:Fri Oct 16 11:29:08 BST 2020
+
+You can get a refund of: 70 Pence
+
 ticketMa1.refundBalance()
     returned int 70
+TicketMachine ticketMa1 = new TicketMachine();
 ticketMa1.insert200p();
-Total Amount Entered200
+Total Amount Entered 200
+
 ticketMa1.insert100p();
-Total Amount Entered300
+Total Amount Entered 300
+
 ticketMa1.selectTicket("High Wycombe");
-Please Insert30more pence to purchase ticket
+Please Insert 30 more pence to purchase ticket
+
 ticketMa1.insert10p();
-Total Amount Entered310
+Total Amount Entered 310
+
 ticketMa1.insert20p();
-Total Amount Entered330
+Total Amount Entered 330
+
 ticketMa1.selectTicket("High Wycombe");
 Your Transation has been approved
-Destination: High WycombePrice:330pence
-Issued:Thu Oct 15 15:26:21 BST 2020
-You can get a refund of:0Pence
+Destination:  High WycombePrice:330 pence
+Issued:Fri Oct 16 11:35:11 BST 2020
+
+You can get a refund of: 0 Pence
+
+ticketMa1.insert100p();
+Total Amount Entered 100
+
+ticketMa1.selectTicket("Amersham");
+Please Insert 200 more pence to purchase ticket
+
+ticketMa1.insert200p();
+Total Amount Entered 300
+
+ticketMa1.selectTicket("Amersham");
+Your Transation has been approved
+Destination:  AmershamPrice:300 pence
+Issued:Fri Oct 16 11:35:11 BST 2020
+
+You can get a refund of: 0 Pence
+
+ticketMa1.insert100p();
+Total Amount Entered 100
+
+ticketMa1.selectTicket("Aylesbury");
+Please Insert 120 more pence to purchase ticket
+
+ticketMa1.insert100p();
+Total Amount Entered 200
+
+ticketMa1.insert20p();
+Total Amount Entered 220
+
+ticketMa1.selectTicket("Aylesbury");
+Your Transation has been approved
+Destination:  AylesburyPrice:220 pence
+Issued:Fri Oct 16 11:35:11 BST 2020
+
+You can get a refund of: 0 Pence
+
+ticketMa1.insert200p();
+Total Amount Entered 200
+
+ticketMa1.insert200p();
+Total Amount Entered 400
+
+ticketMa1.selectTicket("Aylesbury");
+Your Transation has been approved
+Destination:  AylesburyPrice:220 pence
+Issued:Fri Oct 16 11:35:11 BST 2020
+
+You can get a refund of: 180 Pence
+
+ticketMa1.refundBalance()
+    returned int 180
+ticketMa1.insert200p();
+Total Amount Entered 200
+
+ticketMa1.insert200p();
+Total Amount Entered 400
+
+ticketMa1.selectTicket("Amersham");
+Your Transation has been approved
+Destination:  AmershamPrice:300 pence
+Issued:Fri Oct 16 11:35:11 BST 2020
+
+You can get a refund of: 100 Pence
+
+ticketMa1.refundBalance()
+    returned int 100
+ticketMa1.insert200p();
+Total Amount Entered 200
+
+ticketMa1.insert200p();
+Total Amount Entered 400
+
+ticketMa1.selectTicket("High Wycombe");
+Your Transation has been approved
+Destination:  High WycombePrice:330 pence
+Issued:Fri Oct 16 11:35:11 BST 2020
+
+You can get a refund of: 70 Pence
+
+ticketMa1.refundBalance()
+    returned int 70

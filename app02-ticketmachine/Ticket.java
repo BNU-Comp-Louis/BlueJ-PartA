@@ -63,9 +63,10 @@ public class Ticket
      */
     public void print()
     {
-        System.out.print("Destination: " + destination);
-        System.out.println("Price:" + price + "pence");  
+        System.out.print("Destination: " + " " + destination);
+        System.out.println("Price:" + price + " " +  "pence");  
         System.out.println("Issued:" + datePurchased);
+        System.out.println();
     }
     
 }  

@@ -55,77 +55,91 @@ public class TicketMachine
     public void insert10p()
     {//Insert money method with rolling total
         balance = balance + 10;
-        System.out.println("Total Amount Entered" + balance);
+        System.out.println("Total Amount Entered" + " " + balance);
+        System.out.println();
     }
     
     public void insert20p()
     {//Insert money method with rolling total
         balance = balance + 20;
-        System.out.println("Total Amount Entered" + balance);
+        System.out.println("Total Amount Entered" + " " + balance);
+        System.out.println();
     }
     
     public void insert100p()
     {//Insert money method with rolling total
         balance = balance + 100;
-        System.out.println("Total Amount Entered" + balance );
+        System.out.println("Total Amount Entered" + " " + balance );
+        System.out.println();
     }
     
     public void insert200p()
     {//Insert money method with rolling total
         balance = balance + 200;
-        System.out.println("Total Amount Entered" + balance);
+        System.out.println("Total Amount Entered" + " " + balance);
+        System.out.println();
     }
     
     public void selectTicket(String destination)
-    //Selection of Tickets at Set prices and print method to display balance
-    {
+     //Selection of Tickets at Set prices and print method to display balance
+     {
         if (destination.equals ("Amersham"))
         {
             if (balance<300)
             {
-                System.out.println("Please Insert" +(300- balance) + 
-                "more pence to purchase ticket");
+                System.out.println("Please Insert" + " " +(300- balance) + 
+                " " + "more pence to purchase ticket");
+                System.out.println();
             }
             else
             {
                 System.out.println("Your Transation has been approved");
                 amershamTicket.print();
                 balance = balance - 300;
-                System.out.println("You can get a refund of:" + balance +
+                System.out.println("You can get a refund of:" + " "
+                + balance + " " +
                 "Pence");
-                
+                System.out.println();
             } 
         }
         if (destination.equals ("Aylesbury"))
         {
             if (balance<220)
             {
-                System.out.println("Please Insert" + (220 - balance) +
+                System.out.println("Please Insert" + " " + 
+                (220 - balance) + " " + 
                 "more pence to purchase ticket");
+                System.out.println();
             }
             else
             {
                 System.out.println("Your Transation has been approved");
                 aylesburyTicket.print();
                 balance = balance - 220;
-                System.out.println("You can get a refund of:" + balance +
+                System.out.println("You can get a refund of:" + " " 
+                + balance + " " + 
                 "Pence");
+                System.out.println();
             }
         }
         if (destination.equals ("High Wycombe"))
         {
             if (balance<330)
             {
-                System.out.println("Please Insert"  +  (330 - balance)  +
+                System.out.println("Please Insert" + " " +  (330 - balance) 
+                + " " +
                 "more pence to purchase ticket");
+                System.out.println();
             }
             else
             {
                 System.out.println("Your Transation has been approved");
                 highWycombeTicket.print();
                 balance = balance - 330;
-                System.out.println("You can get a refund of:" + balance +
+                System.out.println("You can get a refund of:" + " " 
+                + balance + " " + 
                 "Pence");
+                System.out.println();
             }
         }
     }
@@ -198,6 +212,7 @@ public class TicketMachine
         aylesburyTicket.print(); 
         highWycombeTicket.print();
         printMessage();
+        System.out.println();
     }   
     
     /**
@@ -208,6 +223,7 @@ public class TicketMachine
         System.out.println("####Destinination Request####");
         System.out.println("We have Three avavilble destintaions");
         System.out.println("See Availble Tickets Below:");
+        System.out.println();
     }
         
     /**
@@ -216,6 +232,7 @@ public class TicketMachine
     public void printMessage()
     {
         System.out.println("Thankyou for choosing TicketMachine");
+        System.out.println();
     }
  
 }
