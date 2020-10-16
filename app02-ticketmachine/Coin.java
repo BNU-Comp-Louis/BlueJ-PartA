@@ -1,5 +1,5 @@
 
-/**
+ /**
  * This class will select different amounts of coins 
  *
  * @author (Louis Symons)

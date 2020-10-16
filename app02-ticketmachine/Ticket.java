@@ -1,13 +1,15 @@
 import java.util.Date;
 
 /**
- * A selection of Tickets to three different destinations.
+ * A selection of Tickets to three different destinations, 
+ * price and the date and time purchased
  *
  * @author Louis Symons
  * @version (15/10/2020)
  */
 public class Ticket
 {
+    //Fields 
     private String destination;
     //Destination of a Ticket
     private int price;
@@ -42,12 +44,14 @@ public class Ticket
     }
     
     public Date datePurchased()
-    //Will show the date of purchase
+    /**
+     * Will show the date and time of purchase
+     */
     {
         return datePurchased;
     }
     
-    /**
+     /**
      * Return the destination 
      */
     public String getDestination()
