@@ -13,8 +13,8 @@ public class Module
     private String codeNo;
     //
     private int mark;
-    //
-    private Course course;
+    
+    
     
     /**
      * Constructor for objects of class Module
@@ -26,12 +26,15 @@ public class Module
         mark = 0;
         
     }
+    
+    public void awardMark(int mark)
+    //Award mark to student 
+    {
+        this.mark = mark;
+    }
+    
+    
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
+  
   
 }

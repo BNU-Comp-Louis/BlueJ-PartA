@@ -11,7 +11,15 @@ public class Course
     
 
 
-    private String code;
+    private String codeNo;
+    
+    private Module module1;
+    
+    private Module module2;
+    
+    private Module module3;
+    
+    private Module module4;
 
     
     
@@ -21,8 +29,24 @@ public class Course
     public Course (String courseTitle,String courceCode)
     {
         title = courseTitle;
-        code = courceCode;
+        codeNo = courceCode;
     }
-
+    
+    public void addModule(Module module, int moduleNo)
+    {
+        if(moduleNo == 1)
+        {
+        this.module1 = module;
+    } // added others 
+    }
+    
+      /**
+     * Prints out the details of a course
+     */
+    public void print()
+    {
+        // put your code here
+        System.out.println("Course " + codeNo + " - " + title);
+    }
 
 }
