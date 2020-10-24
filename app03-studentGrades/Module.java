@@ -14,7 +14,12 @@ public class Module
     //
     private int mark;
     
+    private int credit;
     
+    private boolean completed;
+    
+    
+
     
     /**
      * Constructor for objects of class Module
@@ -23,7 +28,9 @@ public class Module
     {
         this.title = title;
         this.codeNo = codeNo;
-        mark = 0;
+        mark = -1;
+        credit = 15;
+        completed = false;
         
     }
     
@@ -33,8 +40,28 @@ public class Module
         this.mark = mark;
     }
     
+    public int getMark()
+    {
+        return mark;
+    }
     
-
+    public void print()
+    {
+        System.out.println("Module: " + title + " " + codeNo + " Mark:" 
+        + mark);
+    }
+    
+    public String getCodeNo()
+    {
+        return codeNo;
+    }
+    
+    public boolean isCompleted()
+    {
+        return mark >= 0;
+    }
+    
+    
   
   
 }
