@@ -91,7 +91,7 @@ public class Student
     }
     
          /**
-    * This method will enroll the student to a course 
+    * This method will enroll the student to a course (if else)
     */
     public void enrollOnCourse(Course course)
     {

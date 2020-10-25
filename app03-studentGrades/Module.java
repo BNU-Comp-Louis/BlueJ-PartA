@@ -56,9 +56,14 @@ public class Module
         return codeNo;
     }
     
+    
+    
+       
+    
+    
     public boolean isCompleted()
     {
-        return mark >= 0;
+        return mark >= 39;
     }
     
     

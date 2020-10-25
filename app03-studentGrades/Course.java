@@ -44,19 +44,13 @@ public class Course
     
     public void createModules()
     {
-        module1 = new Module("CO452",  "Programming Concepts");
-        module2 = new Module("CO450",  "Computer Architectures");
-        module3 = new Module("CO454",  "Digital Technologies");
-        module4 = new Module("CO456",  "Web Development");
+        module1 = new Module("Programming Concepts",  "CO452");
+        module2 = new Module("Computer Architectures",  "CO450");
+        module3 = new Module("Digital Technologies",  "CO454");
+        module4 = new Module("Web Development",  "CO456");
     }
     
-    public void addModule(Module module, int moduleNo)
-    {
-        if(moduleNo == 1)
-        {
-        this.module1 = module;
-    } // added others 
-    }
+  
     
     public void setMark(int mark, String codeNo)
     {
