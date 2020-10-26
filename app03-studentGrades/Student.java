@@ -15,9 +15,7 @@ public class Student
     private String name;
     // the student ID
     private String id;
-    // the amount of credits for study taken so far
-    private int credits;
-    //
+    //Course for a student
     private Course course;
     
     /**
@@ -27,7 +25,6 @@ public class Student
     {
         name = fullName;
         id = studentID;
-        credits = 0;
     }
     
     
@@ -54,22 +51,13 @@ public class Student
     {
         return id;
     }
-
-    /**
-     * Add some credit points to the student's accumulated credits.
-     */
-    public void addCredits(int additionalPoints)
-    {
-        credits += additionalPoints;
-    }
-
-    
+   
     /**
      * Return the number of credit points this student has accumulated.
      */
     public int getCredits()
     {
-        return credits;
+        return this.course.getStudentCredits();
     }
 
     /**
@@ -87,10 +75,11 @@ public class Student
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        System.out.println(name + ", student ID: " + id + ", credits: " + this.course.getStudentCredits());
+        this.course.print();
     }
     
-         /**
+        /**
     * This method will enroll the student to a course (if else)
     */
     public void enrollOnCourse(Course course)

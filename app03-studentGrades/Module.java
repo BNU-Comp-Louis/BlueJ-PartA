@@ -1,16 +1,16 @@
 /**
  * Write a description of class Module here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Louis Symons)
+ * @version (24/10/20)
  */
 public class Module
 {
-    //Fields
+    //Title of a course 
     private String title;
-    //
+    //Code number for a module 
     private String codeNo;
-    //
+    //Mark for a module
     private int mark;
     // isCompleted
     private boolean isCompleted;
@@ -28,6 +28,7 @@ public class Module
     }
     
     public int getMark()
+    //Show Mark for module 
     {
         return mark;
     }
@@ -48,20 +49,25 @@ public class Module
     }
     
     public String getCodeNo()
+    //Show code number
     {
         return codeNo;
     }
     
-    public String getTitle() {
+    public String getTitle()
+    //Show title 
+    {
         return this.title;
     }
 
     public boolean getIsCompleted()
+    //shows if the module is complete
     {
         return this.isCompleted;
     }
 
     public void print()
+    //Print module and code number 
     {
         System.out.print("Module: " + title + " " + codeNo);
         if(mark == -1)
