@@ -1,0 +1,36 @@
+Student john = new Student("John West", "J20W");
+Course softwareEngineering = new Course("Software Engineering", "Soft20");
+Module webModule = new Module("Web Development", "CO456");
+john.enrollOnCourse(softwareEngineering);
+softwareEngineering.calculateFinalGrade();
+The course has not completed yet!
+softwareEngineering.setModuleMark(50, "CO450");
+softwareEngineering.setModuleMark(60, "CO452");
+softwareEngineering.setModuleMark(70 , "CO454");
+softwareEngineering.setModuleMark(80, "CO456");
+softwareEngineering.setModuleMark(-10, "CO450");
+Mark cannot be less than 0 or over 100!
+softwareEngineering.setModuleMark(50, "wrong code number");
+Module with code number wrong code number cannot be found!
+softwareEngineering.calculateFinalGrade();
+Course Soft20 - Software Engineering
+Modules: 
+Module: Programming Concepts CO452 Mark:60
+Module: Computer Architectures CO450 Mark:50
+Module: Digital Technologies CO454 Mark:70
+Module: Web Development CO456 Mark:80
+
+Final grade: B
+john.print();
+John West, student ID: J20W, credits: 60
+
+
+Course Soft20 - Software Engineering
+Modules: 
+Module: Programming Concepts CO452 Mark:60
+Module: Computer Architectures CO450 Mark:50
+Module: Digital Technologies CO454 Mark:70
+Module: Web Development CO456 Mark:80
+
+Final grade: B
+
