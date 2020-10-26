@@ -21,8 +21,6 @@ public class Course
     
     private Module module4;
     
-    private int finalMark;
-    
     private String finalGrade;
     
     
@@ -36,7 +34,6 @@ public class Course
     {
         title = courseTitle;
         codeNo = courceCode;
-        this.finalMark =0;
         this.finalGrade = null;
         createModules();
         
@@ -50,52 +47,77 @@ public class Course
         module4 = new Module("Web Development",  "CO456");
     }
     
-  
-    
-    public void setMark(int mark, String codeNo)
+    public String getFinalGrade()
     {
-        if(module1.getCodeNo() == codeNo)
+        return this.finalGrade;
+    }
+
+    public void setModuleMark(int mark, String codeNo)
+    {
+        if(mark >= 0 && mark <= 100){
+
+            if(module1.getCodeNo() == codeNo)
+            {
+                module1.awardMark(mark);
+            }
+            else if(module2.getCodeNo() == codeNo)
+            {
+                module2.awardMark(mark);
+            }
+            else if(module3.getCodeNo() == codeNo)
+            {
+                module3.awardMark(mark);
+            }
+            else if(module4.getCodeNo() == codeNo)
+            {
+                module4.awardMark(mark);
+            }
+            else{
+                System.out.println("Module with code number " + codeNo +" cannot be found!");
+            }
+        }
+        else
         {
-            module1.awardMark(mark);
+            System.out.println("Mark cannot be less than 0 or over 100!");
         }
     }
         
-    public void calculatorFinalMark()
+    public void calculateFinalGrade()
     {
-        if(courseCompleted())
+        if(isCourseCompleted())
         {
-        int totalMark = finalMark = module1.getMark() + module2.getMark() +
-        module3.getMark() + module4.getMark();
-        
-        finalMark = totalMark / 4;      
-        
-        print();
+            int totalMark = (module1.getMark() + module2.getMark() +
+                                    module3.getMark() + module4.getMark()) / 4;
+
+            if (totalMark >= 0 && totalMark <= 39) {
+                this.finalGrade = "F";
+            } else if (totalMark >= 40 && totalMark <= 49) {
+                this.finalGrade = "D";
+            } else if (totalMark >= 50 && totalMark <= 59) {
+                this.finalGrade = "C";
+            } else if (totalMark >= 60 && totalMark <= 69) {
+                this.finalGrade = "B";
+            } else if (totalMark >= 70 && totalMark <= 100) {
+                this.finalGrade = "A";
+            }     
+                   
+            print();
+        }
+        else 
+        {
+            System.out.println("The course has not completed yet!");
+        }
     }
-    else 
+
+    public boolean isCourseCompleted()
     {
-        
-    }
-    
-    }
-        
-    public boolean courseCompleted()
-    {
-        if((module1.isCompleted()) && (module2.isCompleted()) &&
-        ((module3. isCompleted())) && (module4. isCompleted()))
+        if((module1.getIsCompleted()) && (module2.getIsCompleted()) &&
+        ((module3. getIsCompleted())) && (module4. getIsCompleted()))
         {
             return true; 
         }
         else return false;
     } 
-    
-     
-    
-    
-
-
-
-
-    //Print individual module marks 
     
      /**
      * Prints out the details of a course
@@ -104,16 +126,34 @@ public class Course
     {
         // put your code here
         System.out.println("Course " + codeNo + " - " + title);
-        
+        System.out.println("Modules: ");
+
+        module1.print();
+        module2.print();
+        module3.print();
+        module4.print();
+
+        System.out.println();
+        System.out.println("Final grade: "+ this.finalGrade);
     }
     
-    public void printModules()
-    {
-        if(courseCompleted())
-        {
-        System.out.println("Final Mark = " + finalMark);
+    public Module getModule(String moduleCode){
+        if(moduleCode == "CO452"){
+            return module1;
+        }
+        else if(moduleCode == "CO450"){
+            return module2;
+        }
+        else if(moduleCode == "CO454"){
+            return module3;
+        }
+        else if(moduleCode == "CO456"){
+            return module4;
+        }
+        else{
+            System.out.println("Module with code "+ moduleCode + " cannot be found!");
+        }
+        return null;
     }
-    }
-    
     
 }

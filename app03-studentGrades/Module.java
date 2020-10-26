@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class Module here.
  *
@@ -13,42 +12,39 @@ public class Module
     private String codeNo;
     //
     private int mark;
-    
-    private int credit;
-    
-    private boolean completed;
-    
-    
-
+    // isCompleted
+    private boolean isCompleted;
     
     /**
      * Constructor for objects of class Module
      */
-    public Module(String title, String CodeNo)
+    public Module(String title, String codeNo)
     {
         this.title = title;
         this.codeNo = codeNo;
         mark = -1;
-        credit = 15;
-        completed = false;
+        isCompleted = false;
         
-    }
-    
-    public void awardMark(int mark)
-    //Award mark to student 
-    {
-        this.mark = mark;
     }
     
     public int getMark()
     {
         return mark;
     }
-    
-    public void print()
+
+    public void awardMark(int mark)
+    //Award mark to student 
     {
-        System.out.println("Module: " + title + " " + codeNo + " Mark:" 
-        + mark);
+        if(mark > 39)
+        {
+            this.isCompleted = true;
+        }
+        else
+        {
+            System.out.println("Minimum has not been achieved!");
+        }
+
+        this.mark = mark;
     }
     
     public String getCodeNo()
@@ -56,17 +52,25 @@ public class Module
         return codeNo;
     }
     
-    
-    
-       
-    
-    
-    public boolean isCompleted()
-    {
-        return mark >= 39;
+    public String getTitle() {
+        return this.title;
     }
-    
-    
-  
-  
+
+    public boolean getIsCompleted()
+    {
+        return this.isCompleted;
+    }
+
+    public void print()
+    {
+        System.out.print("Module: " + title + " " + codeNo);
+        if(mark == -1)
+        {
+            System.out.println(" This module has not been completed yet!");
+        }
+        else
+        {
+            System.out.println(" Mark:" + mark);
+        }
+    }
 }
