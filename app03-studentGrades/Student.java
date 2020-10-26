@@ -28,7 +28,7 @@ public class Student
     }
     
     
-     /**
+    /**
      * Return the full name of this student.
      */
     public String getName()
@@ -79,7 +79,7 @@ public class Student
         this.course.print();
     }
     
-        /**
+       /**
     * This method will enroll the student to a course (if else)
     */
     public void enrollOnCourse(Course course)
