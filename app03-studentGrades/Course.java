@@ -19,9 +19,9 @@ public class Course
     private Module module3;
     //Module of a course 
     private Module module4;
-    
+    //Final grade for a course
     private String finalGrade;
-    
+    //Credits awarded to a student for completing a course 
     private int studentCredits;
     
 
@@ -121,6 +121,7 @@ public class Course
     }
     
     public int getStudentCredits()
+    //Method to return student credits
     {
         return this.studentCredits;
     }
