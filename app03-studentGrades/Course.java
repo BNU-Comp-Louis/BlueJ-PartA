@@ -24,9 +24,6 @@ public class Course
     //Credits awarded to a student for completing a course 
     private int studentCredits;
     
-
-    
-    
     /**
      * Constructor for objects of class Course
      */
