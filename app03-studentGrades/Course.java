@@ -24,9 +24,6 @@ public class Course
     //Credits awarded to a student for completing a course 
     private int studentCredits;
     
-
-    
-    
     /**
      * Constructor for objects of class Course
      */
@@ -48,7 +45,7 @@ public class Course
     public void setModuleMark(int mark, String codeNo)
     //Method to set module mark 
     {
-        if(mark >= 0 && mark <= 100){
+        if(mark >= 40 && mark <= 100){
             
             if(module1.getCodeNo() == codeNo)
             {

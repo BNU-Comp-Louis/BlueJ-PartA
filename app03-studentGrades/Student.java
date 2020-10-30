@@ -27,7 +27,6 @@ public class Student
         id = studentID;
     }
     
-    
     /**
      * Return the full name of this student.
      */
@@ -86,6 +85,5 @@ public class Student
     {
         this.course = course;
     }
-    
-        
+      
 }
