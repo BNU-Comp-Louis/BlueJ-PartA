@@ -1,8 +1,8 @@
 /**
  * Model some details of a product sold by a company.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author Louis Symons.
+ * @version 30/10/2020
  */
 public class Product
 {
@@ -92,5 +92,10 @@ public class Product
             System.out.println(
                 "Attempt to sell an out of stock item: " + name);
         }
+    }
+    
+    public void setName(String name)
+    {
+        this.name = name;
     }
 }
