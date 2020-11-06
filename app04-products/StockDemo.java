@@ -1,3 +1,4 @@
+import java.util.Random;
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
@@ -10,18 +11,36 @@ public class StockDemo
 {
     // The stock manager.
     private StockManager manager;
-
+    
+    
+    private Random generator;
+    
+    private String name = "Samsung Galaxy"; 
     /**
      * Create a StockManager and populate it with a few
      * sample products.
      */
     public StockDemo(StockManager manager)
     {
+        if(name.startsWith("samsung"))
+        {
+            System.out.println();
+        }
+        
+        generator = new Random();
         this.manager = manager;
+        
+        
         
         manager.addProduct(new Product(100, "Clock Radio"));
         manager.addProduct(new Product(101,  "Mobile Phone"));
         manager.addProduct(new Product(102,  "Microwave Oven"));
+        manager.addProduct(new Product(103, "Clock Radio"));
+        manager.addProduct(new Product(104,  "Mobile Phone"));
+        manager.addProduct(new Product(105,  "Microwave Oven"));
+        manager.addProduct(new Product(106, "Clock Radio"));
+        manager.addProduct(new Product(107,  "Mobile Phone"));
+        manager.addProduct(new Product(108,  "Microwave Oven"));
     }
     
     /**
@@ -31,39 +50,50 @@ public class StockDemo
      */
     //add 10 items for demo items 
     
-    public void demoDelivery()
+    public void runDemo()
     {
         // Show details of all of the products.
         manager.printAllProducts();
         // Take delivery of 5 items of one of the products.
-        manager.delivery(101, 5);
-        manager.delivery(102, 3);
+        demoDelivery();
+        demoDelivery();
+        manager.printAllProducts();
+        
+        demoDelivery();
         manager.printAllProducts();
     }
     
-    /**
-     * Get the product with the given id from the manager.
-     * An error message is printed if there is no match.
-     * @param id The ID of the product.
-     * @return The Product, or null if no matching one is found.
-     */
-    public Product getProduct(int id)
+    private void demoDelivery()
     {
-        Product product = manager.findProduct(id);
-        
-        if(product == null) 
+        printHeading();
+        int amount = 0;
+        for (int id = 101; id <= 112; id++)
         {
-            System.out.println("Product with ID: " + id +
-                               " is not recognised.");
+         amount = generator.nextInt(7) + 1;
+         manager.deliverProduct(id, amount); 
+         amount++;
         }
-        return product;
+        
     }
-
-    /**
-     * @return The stock manager.
-     */
-    public StockManager getManager()
+    
+    private void demoSell()
     {
-        return manager;
+        int amount = 0;
+        for (int id = 101; id <= 112; id++)
+        {
+         amount = generator.nextInt(7) + 1;
+         manager.deliverProduct(id, amount); 
+         amount++;
+        }
+ 
     }
+    
+    public void printHeading()
+    {
+        System.out.println("Demonstrating Delivery of Products");
+        System.out.println();
+    }
+    
 }
+
+
