@@ -59,7 +59,7 @@ public class StockDemo
     
     private void demoDelivery()
     {
-        printHeading("delivery");
+        printHeading("Delivery");
         int amount = 0;
         for (int id = 101; id <= 112; id++)
         {
@@ -67,12 +67,12 @@ public class StockDemo
          manager.deliverProduct(id, amount); 
          amount++;
         }
-        
+        System.out.println();
     }
     
     private void demoSell()
     {
-        printHeading("Sell");
+        printHeading("Selling");
         
         int amount = 0;
         
@@ -86,7 +86,7 @@ public class StockDemo
     public void printHeading(String verb)
     {
         System.out.println();
-        System.out.println("Demonstrating Delivery of Products");
+        System.out.println("Demonstrating " + verb + "of Products");
         System.out.println();
     }
     

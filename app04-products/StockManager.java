@@ -11,14 +11,15 @@ public class StockManager
 {
     // A list of the products.
     private ArrayList<Product> stock;
+    private boolean isProductExist = false;
     
-    List <Product> listProduct = new ArrayList<Product>();
     /**
      * Initialise the stock manager.
      */
     public StockManager()
     {
-        stock = new ArrayList<>();
+        stock = new ArrayList<Product>();
+        
     }
 
     /**
@@ -30,6 +31,9 @@ public class StockManager
         stock.add(item);
     }
     
+    /**
+     * Change a Products name
+     */
     public void changeName(int id, String newName)
     {
         Product product = findProduct (id);
@@ -39,9 +43,8 @@ public class StockManager
            
         }
         else
-    
             System.out.println("Product ID not found");
-        }
+    }
     
     public void removeProduct(int id)
     {
@@ -78,18 +81,15 @@ public class StockManager
     }
     
      public void search(String word)
-    {
-        listProduct.clear();
-        
+     {
         for(Product product : stock) 
         { 
             if(product.getName().contains(word))  
             { 
-                listProduct.add(product);
+                printProduct(product.getID());
             }
         }
-        
-        printProduct();
+
     }
 
     /**
@@ -160,7 +160,7 @@ public class StockManager
         return 0;
     }
     
-        private ArrayList<Product> getLowStock() 
+     private ArrayList<Product> getLowStock() 
     {
         ArrayList<Product> result = new ArrayList<Product>();
         for (Product product : stock) {
@@ -172,7 +172,7 @@ public class StockManager
         return result;
     }
     
-        public void printLowStock()
+    public void printLowStock()
     {
         ArrayList<Product> products = getLowStock();
 
@@ -199,12 +199,23 @@ public class StockManager
         }
     }
     
-        public void printProduct()
+      public void printProduct(int id)
     {
-        listProduct.forEach(product ->
+        
+        stock.forEach(product ->
         {
-            System.out.println(product);
+            if (product.getID() == id)
+            {
+                this.isProductExist = true;
+                System.out.println(product);
+            }
+            
         });
+        if (!isProductExist)
+        {
+            System.out.println("Product ID : " + id+ " cannot be found");
+            this.isProductExist = false;
+        }
     }
     
     public void printHeading()

@@ -90,6 +90,7 @@ public class Product
     /**
      * @return The id, name and quantity in stock.
      */
+    @Override
     public String toString()
     {
         return id + ": " +  name + " stock level: " + quantity;
