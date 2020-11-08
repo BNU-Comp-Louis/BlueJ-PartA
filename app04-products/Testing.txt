@@ -1,0 +1,158 @@
+StockManager Manager = new StockManager();
+StockDemo stockDem1 = new StockDemo(Manager);
+stockDem1.runDemo();
+********
+********
+Louis's Stock List
+********
+
+100: Samsung Mobile stock level: 0
+101: Apple Mobile stock level: 0
+102: Razer Mobile stock level: 0
+103: Samsung Tv stock level: 0
+104: Apple Mac stock level: 0
+105: Xbox  stock level: 0
+106: Playstation stock level: 0
+107: Alienware Laptop stock level: 0
+108: LG Mobile stock level: 0
+109: LG Tv  stock level: 0
+110: Apple iPad stock level: 0
+111: Sony Tv stock level: 0
+112: Lenovo Laptop stock level: 0
+
+Demonstrating Delivery of Products
+
+Product delivered :101: Apple Mobile stock level: 6
+Product delivered :102: Razer Mobile stock level: 3
+Product delivered :103: Samsung Tv stock level: 2
+Product delivered :104: Apple Mac stock level: 1
+Product delivered :105: Xbox  stock level: 2
+Product delivered :106: Playstation stock level: 4
+Product delivered :107: Alienware Laptop stock level: 3
+Product delivered :108: LG Mobile stock level: 7
+Product delivered :109: LG Tv  stock level: 2
+Product delivered :110: Apple iPad stock level: 6
+Product delivered :111: Sony Tv stock level: 1
+Product delivered :112: Lenovo Laptop stock level: 4
+
+
+Demonstrating Selling of Products
+
+101: Apple Mobile stock level: 6
+Sold 1 of Apple Mobile
+Transation Complete
+
+102: Razer Mobile stock level: 3
+Attempt to sell an out of stock item: In Stock 3 Ordered Amount : 4
+We only have : 3 Currently in Stock
+Please only order the amount we have in stock
+
+103: Samsung Tv stock level: 2
+Attempt to sell an out of stock item: In Stock 2 Ordered Amount : 3
+We only have : 2 Currently in Stock
+Please only order the amount we have in stock
+
+104: Apple Mac stock level: 1
+Sold 1 of Apple Mac
+Transation Complete
+
+105: Xbox  stock level: 2
+Attempt to sell an out of stock item: In Stock 2 Ordered Amount : 4
+We only have : 2 Currently in Stock
+Please only order the amount we have in stock
+
+106: Playstation stock level: 4
+Sold 3 of Playstation
+Transation Complete
+
+107: Alienware Laptop stock level: 3
+Sold 2 of Alienware Laptop
+Transation Complete
+
+108: LG Mobile stock level: 7
+Sold 6 of Lg Mobile
+Transation Complete
+
+109: LG Tv  stock level: 2
+Attempt to sell an out of stock item: In Stock 2 Ordered Amount : 5
+We only have : 2 Currently in Stock
+Please only order the amount we have in stock
+
+110: Apple iPad stock level: 6
+Sold 5 of Apple iPad
+Transation Complete
+
+111: Sony Tv stock level: 1
+Attempt to sell an out of stock item: In Stock 1 Ordered Amount : 2
+We only have : 1 Currently in Stock
+Please only order the amount we have in stock
+
+112: Lenovo Laptop stock level: 4
+Attempt to sell an out of stock item: In Stock 4 Ordered Amount : 5
+We only have : 4 Currently in Stock
+Please only order the amount we have in stock
+
+
+********
+********
+Louis's Stock List
+********
+
+
+100: Samsung Mobile stock level: 0
+101: Apple Mobile stock level: 5
+102: Razer Mobile stock level: 3
+103: Samsung Tv stock level: 2
+104: Apple Mac stock level: 0
+105: Xbox  stock level: 2
+106: Playstation stock level: 1
+107: Alienware Laptop stock level: 1
+108: LG Mobile stock level: 1
+109: LG Tv  stock level: 2
+110: Apple iPad stock level: 1
+111: Sony Tv stock level: 1
+112: Lenovo Laptop stock level: 4
+
+Manager.changeName(100, "New Samsung Mobile");
+
+Manager.printProduct(100);
+100: New Samsung Mobile stock level: 0
+
+Manager.removeProduct(100);
+
+Manager.printProduct(100);
+Product ID : 100 cannot be found
+
+Manager.printAllProducts();
+101: Apple Mobile stock level: 5
+102: Razer Mobile stock level: 3
+103: Samsung Tv stock level: 2
+104: Apple Mac stock level: 0
+105: Xbox  stock level: 2
+106: Playstation stock level: 1
+107: Alienware Laptop stock level: 1
+108: LG Mobile stock level: 1
+109: LG Tv  stock level: 2
+110: Apple iPad stock level: 1
+111: Sony Tv stock level: 1
+112: Lenovo Laptop stock level: 4
+
+Manager.search("Apple");
+101: Apple Mobile stock level: 5
+104: Apple Mac stock level: 0
+110: Apple iPad stock level: 1
+
+Manager.search("LG");
+108: LG Mobile stock level: 1
+109: LG Tv  stock level: 2
+
+m.search("q");
+There is no product name`s consisting the word: q
+
+Manager.printLowStock();
+104: Apple Mac stock level: 0
+106: Playstation stock level: 1
+107: Alienware Laptop stock level: 1
+108: LG Mobile stock level: 1
+110: Apple iPad stock level: 1
+111: Sony Tv stock level: 1

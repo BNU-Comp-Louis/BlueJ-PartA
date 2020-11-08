@@ -11,7 +11,6 @@ public class StockManager
 {
     // A list of the products.
     private ArrayList<Product> stock;
-    private boolean isProductExist = false;
     
     /**
      * Initialise the stock manager.
@@ -43,9 +42,15 @@ public class StockManager
            
         }
         else
+        {
             System.out.println("Product ID not found");
+        }
+            
     }
     
+    /**
+     * Remove a product from the list
+     */
     public void removeProduct(int id)
     {
         Product product = findProduct(id);
@@ -69,27 +74,37 @@ public class StockManager
     {
         Product product = findProduct(id);
         if(product != null)
-    {
+        {
         
-        product.increaseQuantity(amount);
-        System.out.println("Product delivered :" + product);
-    }
-    else
-    {
-        System.out.println("Product ID" + id + "NOT FOUND!!!");
-    }
+            product.increaseQuantity(amount);
+            System.out.println("Product delivered :" + product);
+        }
+        else
+        {
+            System.out.println("Product ID" + id + "NOT FOUND!!!");
+        }
     }
     
-     public void search(String word)
-     {
-        for(Product product : stock) 
+    /**
+     * Search for a word within the product name
+     */
+    public void search(String word)
+    {
+    ArrayList<Product> result = new ArrayList<Product>();
+ 
+       for(Product product : stock) 
         { 
-            if(product.getName().contains(word))  
+           if(product.getName().contains(word))  
             { 
                 printProduct(product.getID());
+                result.add(product);                
             }
         }
-
+ 
+       if(result.size() == 0)
+        {
+            System.out.println("There is no product name`s consisting the word: " + word);
+        }
     }
 
     /**
@@ -97,7 +112,7 @@ public class StockManager
      * @return The identified product, or null if there is none
      *         with a matching ID.
      */
-    public Product findProduct(int id)
+     public Product findProduct(int id)
     {
         for(Product product : stock)
         {
@@ -106,17 +121,15 @@ public class StockManager
                 return product;
             }
         }
-            
-         
         return null;
     } 
     
     /**
-     * Sell one of the given item.
+      * Sell one of the given item.
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
      */
-    public void sellProduct(int id, int amount )
+     public void sellProduct(int id, int amount )
     {
         Product product = findProduct(id);
         
@@ -124,16 +137,14 @@ public class StockManager
         {
             printDetails(id);
             product.sell(amount);
-            printDetails(id);
         }
         else
         {
             System.out.println("Product ID not found");
-        }
-            
+        }    
     }
     
-    /**
+   /**
      * Show details of the given product. If found,
      * its name and stock quantity will be shown.
      * @param id The ID of the product to look for.
@@ -160,6 +171,9 @@ public class StockManager
         return 0;
     }
     
+    /**
+     * Method to check if there is any 
+     */
      private ArrayList<Product> getLowStock() 
     {
         ArrayList<Product> result = new ArrayList<Product>();
@@ -172,6 +186,9 @@ public class StockManager
         return result;
     }
     
+    /**
+     * Print any products that have a stock level 
+     */
     public void printLowStock()
     {
         ArrayList<Product> products = getLowStock();
@@ -199,25 +216,25 @@ public class StockManager
         }
     }
     
+    /**
+     * Print a product using its ID
+     */
       public void printProduct(int id)
     {
-        
-        stock.forEach(product ->
+        Product product = findProduct(id);
+        if (product !=null)
         {
-            if (product.getID() == id)
-            {
-                this.isProductExist = true;
-                System.out.println(product);
-            }
-            
-        });
-        if (!isProductExist)
+            System.out.println(product);
+        }
+        else 
         {
             System.out.println("Product ID : " + id+ " cannot be found");
-            this.isProductExist = false;
         }
     }
     
+    /**
+     * Heading for print message
+     */
     public void printHeading()
     {
         System.out.println("********");

@@ -44,6 +44,9 @@ public class Product
         return name;
     }
     
+    /**
+     * Method to change the name of a product.
+     */
     public void changeName(String changeName)
     {
         this.name = changeName;
@@ -58,7 +61,7 @@ public class Product
     }
     
     /**
-     * 
+     * Method to check if a product has a low stock level
      */
     public boolean lowStock()
     { 
@@ -73,7 +76,7 @@ public class Product
     }
     
     /**
-      * 
+      * Method to get low stock 
      */
      public void getLowStock()
      {
@@ -121,23 +124,29 @@ public class Product
      */
     public void sell(int amount)
     {
-        if(quantity >= amount && quantity > 0) 
+        if(amount < 0)
+        {
+            System.out.println("The amount cannot be negative number");
+        }
+     
+        else if(quantity >= amount) 
         {
             quantity-= amount;
             System.out.println("Sold " + amount + " of " + name);
+            System.out.println("Transation Complete");
         }
-        else if(amount > quantity && quantity > 0)
+        else if(amount > quantity)
         {
-            System.out.println("Insufficient Stock = " + quantity + " amount ordered = "
-            + amount);
-            quantity = 0;
-        }
-        {
-            System.out.println(
-                "Attempt to sell an out of stock item: " + name);
+            System.out.println("Attempt to sell an out of stock item: " + "In Stock " + 
+            quantity + " Ordered Amount : " + amount);
+            System.out.println("We only have : " + quantity + " Currently in Stock");
+            System.out.println("Please only order the amount we have in stock");
         }
     }
     
+    /**
+     * Method to set the name of a product.
+     */
     public void setName(String name)
     {
         this.name = name;

@@ -11,11 +11,9 @@ public class StockDemo
 {
     // The stock manager.
     private StockManager manager;
-    
-    
+    //Random number generator
     private Random generator;
     
-    private String name = "Samsung Galaxy"; 
     /**
      * Create a StockManager and populate it with a few
      * sample products.
@@ -24,7 +22,6 @@ public class StockDemo
     {
         generator = new Random();
         this.manager = manager;
- 
         manager.addProduct(new Product(100, "Samsung Mobile"));
         manager.addProduct(new Product(101,  "Apple Mobile"));
         manager.addProduct(new Product(102,  "Razer Mobile"));
@@ -33,7 +30,7 @@ public class StockDemo
         manager.addProduct(new Product(105,  "Xbox "));
         manager.addProduct(new Product(106, "Playstation"));
         manager.addProduct(new Product(107,  "Alienware Laptop"));
-        manager.addProduct(new Product(108,  "Lg Mobile"));
+        manager.addProduct(new Product(108,  "LG Mobile"));
         manager.addProduct(new Product(109,  "LG Tv "));
         manager.addProduct(new Product(110, "Apple iPad"));
         manager.addProduct(new Product(111,  "Sony Tv"));
@@ -45,18 +42,22 @@ public class StockDemo
      * might be used. Details of one product are shown, the
      * product is restocked, and then the details are shown again.
      */
-    
-    
     public void runDemo()
     {
-        // Show details of all of the products.
+        manager.printHeading();
         manager.printAllProducts();
-        // Take delivery of 5 items of one of the products.
         demoDelivery();
         demoSell();
+        System.out.println();
+        manager.printHeading();
+        System.out.println();
         manager.printAllProducts();
+        System.out.println();
     }
     
+    /**
+     * Random generator to deliver products within the set range of product ID's
+     */
     private void demoDelivery()
     {
         printHeading("Delivery");
@@ -70,6 +71,9 @@ public class StockDemo
         System.out.println();
     }
     
+    /**
+     * Random generator to sell products within the set range of product ID's 
+     */
     private void demoSell()
     {
         printHeading("Selling");
@@ -80,16 +84,19 @@ public class StockDemo
         {
             amount = generator.nextInt(7) + 1;
             manager.sellProduct(id, amount);
+            System.out.println();
         }
     }  
     
+    /**
+     * Print heading for delivery and selling methods. 
+     */
     public void printHeading(String verb)
     {
         System.out.println();
-        System.out.println("Demonstrating " + verb + "of Products");
+        System.out.println("Demonstrating " + verb + " of Products");
         System.out.println();
     }
-    
 }
 
 
