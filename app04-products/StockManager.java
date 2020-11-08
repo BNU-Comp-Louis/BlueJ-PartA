@@ -91,8 +91,7 @@ public class StockManager
     public void search(String word)
     {
     ArrayList<Product> result = new ArrayList<Product>();
- 
-       for(Product product : stock) 
+    for(Product product : stock) 
         { 
            if(product.getName().contains(word))  
             { 
@@ -100,8 +99,7 @@ public class StockManager
                 result.add(product);                
             }
         }
- 
-       if(result.size() == 0)
+    if(result.size() == 0)
         {
             System.out.println("There is no product name`s consisting the word: " + word);
         }
