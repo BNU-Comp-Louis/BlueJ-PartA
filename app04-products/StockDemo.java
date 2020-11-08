@@ -22,16 +22,9 @@ public class StockDemo
      */
     public StockDemo(StockManager manager)
     {
-        if(name.startsWith("samsung"))
-        {
-            System.out.println();
-        }
-        
         generator = new Random();
         this.manager = manager;
-        
-        
-        
+ 
         manager.addProduct(new Product(100, "Samsung Mobile"));
         manager.addProduct(new Product(101,  "Apple Mobile"));
         manager.addProduct(new Product(102,  "Razer Mobile"));

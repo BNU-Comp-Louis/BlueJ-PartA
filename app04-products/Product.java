@@ -1,3 +1,5 @@
+import java.lang.String;
+import java.util.*;
 /**
  * Model some details of a product sold by a company.
  * 
@@ -41,13 +43,48 @@ public class Product
     {
         return name;
     }
-
+    
+    public void changeName(String changeName)
+    {
+        this.name = changeName;
+    }
+    
     /**
      * @return The quantity in stock.
      */
     public int getQuantity()
     {
         return quantity;
+    }
+    
+    /**
+     * 
+     */
+    public boolean lowStock()
+    { 
+        if(getQuantity() <=3)
+     {
+        return true;
+     }
+     else
+     {
+        return false;
+     }
+    }
+    
+    /**
+      * 
+     */
+     public void getLowStock()
+     {
+        if (lowStock() == true)
+        {
+            
+        {
+            System.out.println("Product has low stock level: " + id + " " + getQuantity()
+            + "in stock");
+        }
+     }
     }
 
     /**

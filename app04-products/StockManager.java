@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.*;
 /**
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
@@ -11,7 +11,8 @@ public class StockManager
 {
     // A list of the products.
     private ArrayList<Product> stock;
-
+    
+    List <Product> listProduct = new ArrayList<Product>();
     /**
      * Initialise the stock manager.
      */
@@ -29,8 +30,34 @@ public class StockManager
         stock.add(item);
     }
     
+    public void changeName(int id, String newName)
+    {
+        Product product = findProduct (id);
+        if (product !=null)
+        {
+            product.changeName(newName);
+           
+        }
+        else
+    
+            System.out.println("Product ID not found");
+        }
+    
+    public void removeProduct(int id)
+    {
+        Product product = findProduct(id);
+        if (product !=null)
+        {
+            stock.remove(product);
+        }
+        else
+        {
+            System.out.println("Product ID not found");
+        }
+    }
+    
     /**
-     * Receive a delivery of a particular product.
+      * Receive a delivery of a particular product.
      * Increase the quantity of the product by the given amount.
      * @param id The ID of the product.
      * @param amount The amount to increase the quantity by.
@@ -50,6 +77,21 @@ public class StockManager
     }
     }
     
+     public void search(String word)
+    {
+        listProduct.clear();
+        
+        for(Product product : stock) 
+        { 
+            if(product.getName().contains(word))  
+            { 
+                listProduct.add(product);
+            }
+        }
+        
+        printProduct();
+    }
+
     /**
      * Try to find a product in the stock with the given id.
      * @return The identified product, or null if there is none
@@ -84,9 +126,14 @@ public class StockManager
             product.sell(amount);
             printDetails(id);
         }
+        else
+        {
+            System.out.println("Product ID not found");
+        }
+            
     }
     
-     /**
+    /**
      * Show details of the given product. If found,
      * its name and stock quantity will be shown.
      * @param id The ID of the product to look for.
@@ -112,7 +159,35 @@ public class StockManager
     {
         return 0;
     }
+    
+        private ArrayList<Product> getLowStock() 
+    {
+        ArrayList<Product> result = new ArrayList<Product>();
+        for (Product product : stock) {
+            if(product.getQuantity() <= 1)
+            {
+                result.add(product);
+            }
+        }
+        return result;
+    }
+    
+        public void printLowStock()
+    {
+        ArrayList<Product> products = getLowStock();
 
+        if(products.size() > 0)
+        {
+            for (Product product : products) {
+                System.out.println(product);
+            }
+        }
+        else
+        {
+            System.out.println("Currently no Products have low stock");
+        }
+    }
+    
     /**
      * Print details of all the products.
      */
@@ -122,6 +197,14 @@ public class StockManager
         {  
             System.out.println(product);  
         }
+    }
+    
+        public void printProduct()
+    {
+        listProduct.forEach(product ->
+        {
+            System.out.println(product);
+        });
     }
     
     public void printHeading()
