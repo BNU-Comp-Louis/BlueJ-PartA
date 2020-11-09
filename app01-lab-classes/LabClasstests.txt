@@ -12,3 +12,10 @@ co452Lab.setTime("Tuesday 29th Septemeber 2020");
 co452Lab.enrollStudent(mary);
 co452Lab.enrollStudent(john);
 co452Lab.enrollStudent(mike);
+Lab class 29/09/20
+Instructor: Nichloas Day   Room: G100
+Class list:
+mary, student ID: 123456, credits: 20, Course G100
+John, student ID: 123455, credits: 20, Course G100
+Mike, student ID: 123445, credits: 20, Course G100
+Number of students: 3

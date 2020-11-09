@@ -23,6 +23,22 @@ public class Course
         title = courseTitle;
         code = courceCode;
     }
+    
+       /**
+     * Returns the code number 
+     **/
+    public String getCodeNumber()
+    {
+        return this.code;
+    }
 
-
+    /**
+     * Returns the title 
+     **/
+    public String getTitle()
+    {
+        return this.title;
+    }
 }
+
+
