@@ -2,19 +2,16 @@
 /**
  * This a computing course held in G100 by Nicholas Day 
  *
- * @author (louis symons)
+ * @author Louis Symons
+ * 28/09/20
  */
 public class Course
 {
-    //Computing G100
+    //Title of course
     private String title; 
-    
-
-
+    //Code for a course
     private String code;
 
-    
-    
     /**
      * Constructor for objects of class Course
      */

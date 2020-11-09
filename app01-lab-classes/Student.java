@@ -6,6 +6,8 @@ import java.util.*;
  * 
  * @author Michael Kölling and David Barnes
  * @version 2016.02.29
+ * Louis Symons 
+ * 28/09/2020
  */
 public class Student
 {
@@ -79,6 +81,9 @@ public class Student
         return name.substring(0,4) + id.substring(0,3);
     }
     
+    /**
+     * Return the value of returned on course 
+     */
     public String getEnrolledCourse()
     {
         return course;
