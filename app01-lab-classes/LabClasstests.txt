@@ -12,6 +12,7 @@ co452Lab.setTime("Tuesday 29th Septemeber 2020");
 co452Lab.enrollStudent(mary);
 co452Lab.enrollStudent(john);
 co452Lab.enrollStudent(mike);
+labClass2.printList();
 Lab class 29/09/20
 Instructor: Nichloas Day   Room: G100
 Class list:
