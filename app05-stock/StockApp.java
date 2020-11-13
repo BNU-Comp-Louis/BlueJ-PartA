@@ -13,15 +13,20 @@ public class StockApp
     
     public static final String QUIT = "quit";
     public static final String ADD = "add";
-    public static final String PRINT_ALL = "printAll";
+    public static final String PRINT_ALL = "printall";
     // Use to get user input
     private InputReader input;
     
-    private StockManager manager = new StockManager();
+    private StockManager manager;
     
-    private StockDemo demo = new StockDemo(manager);
+    private StockDemo demo;
     
-
+public StockApp()
+{
+    this.input=new InputReader();
+    this.manager=new StockManager();
+    this.demo = new StockDemo(manager);
+}
 
     /**
      * 
@@ -38,7 +43,7 @@ public class StockApp
            
             String choice = input.getString().toLowerCase();
             if(choice.equals(QUIT))
-            finished = true;
+                finished = true;
             else
                 executeMenuChoice(choice);
         }
