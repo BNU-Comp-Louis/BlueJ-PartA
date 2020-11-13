@@ -31,7 +31,7 @@ public class StockApp
            {
         boolean finished = false;
         
-        while(!finished)
+            while(!finished)
         {
             printHeading();
             printMenuChoices();
