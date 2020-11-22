@@ -27,7 +27,7 @@ public class StockManager
      */
     public boolean addProduct(Product item)
     {
-        if(findProduct(item.getID()) != null)
+        if(isProductIDExist(item.getID()))
         {
             System.out.println("This Product ID already Exists");
             return false;
@@ -133,6 +133,18 @@ public class StockManager
         return null;
     } 
     
+    public boolean isProductIDExist(int id)
+    {
+          for(Product product : stock)
+        {
+            if(product.getID()== id)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+        
     /**
       * Sell one of the given item.
      * Show the before and after status of the product.

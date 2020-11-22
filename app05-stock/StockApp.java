@@ -79,7 +79,6 @@ public StockApp()
         Product product = new Product(id , name);
         manager.addProduct(product);
         
-        System.out.println("\n You have added " + product);
         System.out.println();
     }
     
