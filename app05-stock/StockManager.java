@@ -25,9 +25,20 @@ public class StockManager
      * Add a product to the list.
      * @param item The item to be added.
      */
-    public void addProduct(Product item)
+    public boolean addProduct(Product item)
     {
-        stock.add(item);
+        if(findProduct(item.getID()) != null)
+        {
+            System.out.println("This Product ID already Exists");
+            return false;
+        }
+        else
+        {
+            stock.add(item);
+            System.out.println("\n You Have Added " + item);
+            return true;
+        }
+        
     }
     
     /**
