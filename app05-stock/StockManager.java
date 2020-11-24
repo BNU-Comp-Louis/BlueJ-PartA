@@ -106,7 +106,8 @@ public class StockManager
     ArrayList<Product> result = new ArrayList<Product>();
     for(Product product : stock) 
         { 
-           if(product.getName().contains(word))  
+            String productName = product.getName().toLowerCase();
+           if(productName.contains(word.toLowerCase()))  
             { 
                 printProduct(product.getID());
                 result.add(product);                
@@ -209,6 +210,19 @@ public class StockManager
         return result;
     }
     
+    public void reStockProducts()
+    {
+        ArrayList<Product> lowStockProducts=getLowStock();
+        if (!lowStockProducts.isEmpty()){
+            System.out.println("Re Stocking Low Stocked Products");
+            for (Product product : lowStockProducts) {
+                product.increaseQuantity(1);
+                printProduct(product.getID());
+            }
+        }
+        else System.out.println("No Products Currently Low Stock");
+    }
+
     /**
      * Print any products that have a stock level 
      */
