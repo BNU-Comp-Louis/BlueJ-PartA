@@ -14,6 +14,8 @@ public class StockApp
     public static final String QUIT = "quit";
     public static final String ADD = "add";
     public static final String PRINT_ALL = "printall";
+    public static final String REMOVE = "remove";
+    public static final String DELIVER = "deliver";
     // Use to get user input
     private InputReader input;
     
@@ -21,12 +23,12 @@ public class StockApp
     
     private StockDemo demo;
     
-public StockApp()
-{
-    this.input=new InputReader();
-    this.manager=new StockManager();
-    this.demo = new StockDemo(manager);
-}
+    public StockApp()
+    {
+        this.input=new InputReader();
+        this.manager=new StockManager();
+        this.demo = new StockDemo(manager);
+    }
 
     /**
      * 
@@ -34,7 +36,7 @@ public StockApp()
     public void run()
     {
            {
-        boolean finished = false;
+         boolean finished = false;
         
             while(!finished)
         {
@@ -47,22 +49,47 @@ public StockApp()
             else
                 executeMenuChoice(choice);
         }
-    }
+            }
     }
     
 
     private void executeMenuChoice(String choice)
     {
-        if(choice.equals(ADD))
-        {
-            addProduct();
-        }
-        else if(choice.equals(PRINT_ALL))
-        {
-            manager.printAllProducts();
-            String value = input.getString();
-        }
+         switch (choice) {
+            case ADD:
+                addProduct();
+                break;
+            case PRINT_ALL:
+                manager.printAllProducts();
+                break;
+            case REMOVE:
+                removeProduct();
+                break;
+            case DELIVER:
+               deliverProduct();
+            default:
+            System.out.println("Commmand Cannot be found");
+            
+         }
+    }
+    
+    private void deliverProduct()
+    {
+       System.out.println("Enter ID of Product for Delivery");
+       int id = input.getInt();
+    }
+    
+    private void removeProduct()
+    {
+        System.out.println("Removing a Product\n");
         
+        System.out.println("Please Enter the Product ID");
+        int id = input.getInt();
+        
+        manager.removeProduct(id);
+        System.out.println("This Product has been Removed");
+        
+        System.out.println();
     }
     
     private void addProduct()
@@ -70,8 +97,7 @@ public StockApp()
         System.out.println("Adding new product\n");
         
         System.out.println("Please enter the product ID");
-        String value = input.getString();
-        int id = Integer.parseInt(value);
+        int id = input.getInt();
         
         System.out.println("Please enter the name of the product");
         String name = input.getString();

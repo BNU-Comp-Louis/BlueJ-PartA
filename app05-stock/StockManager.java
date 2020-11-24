@@ -68,6 +68,8 @@ public class StockManager
         if (product !=null)
         {
             stock.remove(product);
+            System.out.println(product);
+            
         }
         else
         {

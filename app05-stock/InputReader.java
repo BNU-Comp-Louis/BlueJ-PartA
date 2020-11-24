@@ -33,4 +33,10 @@ public class InputReader
 
         return inputLine;
     }
+    
+    public int getInt()
+    {
+        int inputInt = Integer.parseInt(getString());
+        return inputInt;
+    }
 }
