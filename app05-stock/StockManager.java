@@ -168,7 +168,7 @@ public class StockManager
         }    
     }
     
-   /**
+    /**
      * Show details of the given product. If found,
      * its name and stock quantity will be shown.
      * @param id The ID of the product to look for.
@@ -210,6 +210,9 @@ public class StockManager
         return result;
     }
     
+    /**
+     * Restock proudcts that are low stock 
+     */
     public void reStockProducts()
     {
         ArrayList<Product> lowStockProducts=getLowStock();

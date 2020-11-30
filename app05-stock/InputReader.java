@@ -6,7 +6,8 @@ import java.util.Scanner;
  * The text typed by a user is returned.
  * 
  * @author     Michael Kölling and David J. Barnes
- * @version    0.1 (2016.02.29)
+ *  Louis Symons
+ * @version    0.1 (15/11/2020)
  */
 public class InputReader
 {
@@ -34,6 +35,9 @@ public class InputReader
         return inputLine;
     }
     
+    /**
+     * Get a interger to provide a String
+     */
     public int getInt()
     {
         int inputInt = Integer.parseInt(getString());

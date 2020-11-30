@@ -3,12 +3,12 @@
  * This app provides a user interface to the stock manager so that users can
  * add, edit, print and remove stock products
  *
- * @author Student Name
- * @version 0.1
+ * @Louis Symons
+ * @version (15/11/2020)
  */
+
 public class StockApp {
     public static final char CLEAR_CODE = '\u000c';
-
     public static final String QUIT = "quit";
     public static final String ADD = "add";
     public static final String PRINT_ALL = "printall";
@@ -18,13 +18,12 @@ public class StockApp {
     public static final String LOW_STOCK = "lowstock";
     public static final String RE_STOCK = "restock";
     public static final String SELL = "sell";
-    // Use to get user input
     private InputReader input;
-
     private StockManager manager;
-
     
-
+    /**
+     * Use to get users input and previous features from manager.
+     */
     public StockApp() {
         this.input = new InputReader();
         this.manager = new StockManager();
@@ -32,7 +31,7 @@ public class StockApp {
     }
 
     /**
-     * 
+     * Running the application
      */
     public void run() {
         {
@@ -50,7 +49,10 @@ public class StockApp {
             }
         }
     }
-
+    
+    /**
+     * Method to execute the users input via the menu choices provivded 
+     */
     private void executeMenuChoice(String choice) {
         switch (choice) {
             case ADD:
@@ -82,7 +84,10 @@ public class StockApp {
 
         }
     }
-
+    
+    /**
+     * Method to sell Products
+     */
     private void sellProduct()
     {
         System.out.println("Please Enter the ID of the Product to sell");
@@ -93,20 +98,29 @@ public class StockApp {
         System.out.println("");
     }
     
-    private void printLowStock()
+    /**
+     * Method to Print products with a low stock level 
+     */
+     private void printLowStock()
     {
         System.out.println("All Products currently Low Stock\n");
         manager.printLowStock();
     }
-
-    private void searchProduct()
+    
+    /**
+     * Method to search for products using there name
+     */
+     private void searchProduct()
     {
         System.out.println("Please Enter the Name of Product");
         String word = input.getString();
         manager.search(word);
     }
-
-    private void deliverProduct() {
+    
+    /**
+     * Method to deliver a product
+     */
+     private void deliverProduct() {
         System.out.println("Enter ID of Product for Delivery");
         int id = input.getInt();
         System.out.println("Enter Amount being Delivered");
@@ -114,7 +128,10 @@ public class StockApp {
         manager.deliverProduct(id, amount);
         System.out.println("");
     }
-
+ 
+    /**
+     * Method to remove a product
+     */
     private void removeProduct() {
         System.out.println("Removing a Product\n");
 
@@ -126,7 +143,10 @@ public class StockApp {
 
         System.out.println();
     }
-
+    
+    /**
+     * Method to add a product
+     */
     private void addProduct() {
         System.out.println("Adding new product\n");
 
