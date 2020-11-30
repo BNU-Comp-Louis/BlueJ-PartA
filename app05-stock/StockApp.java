@@ -73,14 +73,26 @@ public class StockApp {
                 break;  
             case RE_STOCK:
                 manager.reStockProducts();
-                break;        
+                break; 
+            case SELL:
+                sellProduct();
+                break;
             default:
                 System.out.println("Menu choice Cannot be found");
 
         }
     }
 
-
+    private void sellProduct()
+    {
+        System.out.println("Please Enter the ID of the Product to sell");
+        int id = input.getInt();
+        System.out.println("Please Enter the Amount you wish to sell");
+        int amount = input.getInt();
+        manager.sellProduct(id, amount);
+        System.out.println("");
+    }
+    
     private void printLowStock()
     {
         System.out.println("All Products currently Low Stock\n");

@@ -1,0 +1,188 @@
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> add
+Adding new product
+
+Please enter the product ID
+> 115
+Please enter the name of the product
+> iPhone XS Max
+
+ You Have Added 115: iPhone XS Max stock level: 0
+
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> add
+Adding new product
+
+Please enter the product ID
+> 116
+Please enter the name of the product
+> NZXT Watercooler
+
+ You Have Added 116: NZXT Watercooler stock level: 0
+
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> add
+Adding new product
+
+Please enter the product ID
+> 117
+Please enter the name of the product
+> Corsair 16gb Ram DDR4
+
+ You Have Added 117: Corsair 16gb Ram DDR4 stock level: 0
+
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> add
+Adding new product
+
+Please enter the product ID
+> 118
+Please enter the name of the product
+> Razer Mouse
+
+ You Have Added 118: Razer Mouse stock level: 0
+
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> add
+Adding new product
+
+Please enter the product ID
+> 119
+Please enter the name of the product
+> Benq Monitor
+
+ You Have Added 119: Benq Monitor stock level: 0
+
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> add
+Adding new product
+
+Please enter the product ID
+> 100
+Please enter the name of the product
+> Sony Playstation
+This Product ID already Exists
+
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> add
+Adding new product
+
+Please enter the product ID
+> 120
+Please enter the name of the product
+> 
+
+ You Have Added 120:  stock level: 0
+
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products

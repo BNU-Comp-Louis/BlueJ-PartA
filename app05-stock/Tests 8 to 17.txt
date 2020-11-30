@@ -1,0 +1,254 @@
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> remove
+Removing a Product
+
+Please Enter the Product ID
+> 100
+100: Samsung Mobile stock level: 0
+This Product has been Removed
+
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> remove
+Removing a Product
+
+Please Enter the Product ID
+> 200
+Product ID not found
+This Product has been Removed
+
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> printall
+101: Apple Mobile stock level: 0
+102: Razer Mobile stock level: 0
+103: Samsung Tv stock level: 0
+104: Apple Mac stock level: 0
+105: Xbox  stock level: 0
+106: Playstation stock level: 0
+107: Alienware Laptop stock level: 0
+108: LG Mobile stock level: 0
+109: LG Tv  stock level: 0
+110: Apple iPad stock level: 0
+111: Sony Tv stock level: 0
+112: Lenovo Laptop stock level: 0
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> deliver
+Enter ID of Product for Delivery
+> 111
+Enter Amount being Delivered
+> 5
+Product delivered :111: Sony Tv stock level: 5
+
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> deliver
+Enter ID of Product for Delivery
+> 102
+Enter Amount being Delivered
+> -5
+Attempt to restock Razer Mobile with a non-positive amount: -5
+Product delivered :102: Razer Mobile stock level: 0
+
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> sell
+Please Enter the ID of the Product to sell
+> 100
+Please Enter the Amount you wish to sell
+> 2
+100: Samsung Mobile stock level: 4
+Sold 2 of Samsung Mobile
+Transation Complete
+
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> > sell
+Please Enter the ID of the Product to sell
+> 100
+Please Enter the Amount you wish to sell
+> 5
+100: Samsung Mobile stock level: 4
+Attempt to sell an out of stock item: In Stock 4 Ordered Amount : 5
+We only have : 4 Currently in Stock
+Please only order the amount we have in stock
+
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> > sell
+Please Enter the ID of the Product to sell
+> 100
+Please Enter the Amount you wish to sell
+> -2
+100: Samsung Mobile stock level: 4
+The amount cannot be negative number
+
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> > search
+Please Enter the Name of Product
+> apple
+101: Apple Mobile stock level: 0
+104: Apple Mac stock level: 0
+110: Apple iPad stock level: 0
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
+
+> lowstock
+All Products currently Low Stock
+
+101: Apple Mobile stock level: 0
+102: Razer Mobile stock level: 0
+103: Samsung Tv stock level: 0
+104: Apple Mac stock level: 0
+105: Xbox  stock level: 0
+107: Alienware Laptop stock level: 0
+108: LG Mobile stock level: 0
+109: LG Tv  stock level: 0
+110: Apple iPad stock level: 0
+111: Sony Tv stock level: 0
+******************************
+ Stock Management Application 
+    App05: by Louis Symons
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+    Deliver:    Delivery of a Product
+    Sell:       Sell a Current Product
+    Search:     Search for a Product
+    LowStock:   Print Products with a low stock
+    ReStock:    Re Stock all Low stock Products
