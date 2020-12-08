@@ -2,11 +2,11 @@
 dependency1.from=StockDemo
 dependency1.to=Product
 dependency1.type=UsesDependency
-dependency2.from=Program
-dependency2.to=StockApp
+dependency2.from=StockManager
+dependency2.to=Product
 dependency2.type=UsesDependency
-dependency3.from=StockManager
-dependency3.to=Product
+dependency3.from=Program
+dependency3.to=StockApp
 dependency3.type=UsesDependency
 dependency4.from=StockApp
 dependency4.to=InputReader
