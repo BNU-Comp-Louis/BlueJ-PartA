@@ -1,0 +1,72 @@
+Hello Adventurer, the castle you have approached needs help!
+Your quest should you wish to accept it
+Explore the Castle to find the treasures within
+You must then summon and defeat the Boss to complete your quest    
+The boss requires a gold offering to be spawned so check every room
+Good luck adventurer...
+
+Welcome to the World of Zuul!
+World of Zuul is a new, incredibly boring adventure game.
+Type 'help' if you need help.
+
+You are outside the entrance of a old castle.
+Exits: west
+5 Gold in this room
+> help
+You are in a Castle, find the Gold, Kill the Boss!
+around at Castle.
+
+Your command words are:
+help  attack  buy  go  pickup  quit
+> pickup gold
+You have looted 5 Gold!
+total:5
+> go west
+You are in the main courtyard.
+Exits: east south north west
+5 Gold in this room
+> pickup gold
+You have looted 5 Gold!
+total:10
+> go east
+You are in the castle's kitchen.
+Exits: south west
+Round Shield: 100stats
+> go south
+You are in the damp Cellar.
+Exits: south north
+5 Gold in this room
+> pickup gold
+You have looted 5 Gold!
+total:15
+> go north
+You are You are in the castle's kitchen.
+Exits: south west
+Round Shield: 100stats.
+Exits: south west
+Round Shield: 100stats
+> go west
+You are You are in the main courtyard.
+Exits: east south north west
+5 Gold in this room.
+Exits: east south north west
+> go west
+You are in the Armory.
+Exits: east south
+Long Sword: 100dps
+> go south
+You are in the barracks.
+Exits: north west
+5 Gold in this room
+> pickup gold 
+You have looted 5 Gold!
+total:20
+> go home
+There is no door!
+> go west
+Offer your gold to spawn boss? (y/n)
+> y
+The boss has been spawned!
+> attack
+You Have been defeated by the boss, You have lost!
+PS A:\Repos\Other Clones\IJ-App06-Zuul2> 
